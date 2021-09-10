@@ -11,3 +11,35 @@ h1 {
   text-align: 
 }
 
+box-sizing: border-box;
+
+:root {
+    --header-height: 3em;
+
+    --color-neutral: #440808; 
+    --color-neutral-dark: #F08080; 
+    --color-neutral-medium: #F08080;
+    --color-neutral-light: #FAD1D1;
+
+    --color-main-light:lightcoral;
+    --color-main-medium:coral;
+    --color-main-dark:salmon;
+
+    --color-alt-light:brown;
+    --color-alt-medium:indianred;
+    --color-alt-dark:darkred;
+
+    --color-black:#000;
+    --color-white:#fff;
+
+    --color-warning: #ffc21a;
+    --color-error: #ff5833;
+    --color-confirm: #1acb4a;
+    
+    --header-height:3rem;
+    --spacing:1rem;
+
+    --font-serif: Futura, "Freight Pro", Span, serif;;
+    --font-sans: Open Sans, Arial, Soleil, sans-serif;;
+
+}
