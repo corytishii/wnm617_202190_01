@@ -4,8 +4,17 @@
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="http://www.corytishii.com/aau/wnm617/">
 	<base href="http://www.corytishii.com/aau/wnm617/ishii.cory">
     <link rel="stylesheet" type='text/css' media='screen' href="style.css">
+    <header class="navbar"></header>
+     <nav>
+       <div>
+           <a href="#about">Work</a>
+           <a href="#projects">Resume</a>
+           <a href="#contact">About Me</a>
+       </div> 
+    </nav>
 	
 
 	<title>About Me</title>
@@ -22,10 +31,41 @@
 	body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background-color: lightblue;
+  background-color: #b3f0ff;
  
 }
 
+nav {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-between;
+    background: #003d4d; 
+    color: #ddd;
+    align-items: center;
+}
+
+nav a{
+    padding: .25rem .5rem;
+    margin-left: 1rem;
+    background: #b3f0ff;
+    color: #444;
+    text-decoration: none;
+    }
+
+nav a:hover{
+    background: #007a99;
+}
+
+#banner{
+    background: #888;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
+    min-height: 10rem;
+    width: 100%;
+}
 
 h1 {
   color: black;
