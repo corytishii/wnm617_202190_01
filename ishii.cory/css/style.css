@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -5,15 +9,62 @@ body {
  
 }
 
+nav {
+    display: flex;
+    width: 100%;
+    padding: 0rem;
+    height: 2rem;
+    justify-content: space-between;
+    background: #003d4d; 
+    color: #ddd;
+    align-items: center;
+}
+
+nav a{
+    padding: .0rem 1rem;
+    height: 100%;
+    margin-left: 0rem;
+    background: none;
+    color: #b3f0ff;
+    text-decoration: none;
+    }
+
+nav a:hover{
+    color: #fff;
+}
+
+#banner{
+    background: #888;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
+    min-height: 10rem;
+    width: 100%;
+}
+
+
 h1 {
   color: black;
   text-align: 
+
 }
 
-box-sizing: border-box;
+.about-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 2rem;
+}
+
+.center {
+    text-align: center;
+}
 
 
-:root {
+
+/*:root {
     --header-height: 3em;
 
     --color-neutral: #440808; 
@@ -42,124 +93,10 @@ box-sizing: border-box;
     --font-serif: Futura, "Freight Pro", Span, serif;;
     --font-sans: Open Sans, Arial, Soleil, sans-serif;;
 
-}
-*{
-    margin:0;
-    box-sizing: border-box; 
-    /* border: 1px solid green;    */
-    font-family: 'Roboto', sans-serif;
-}
+}*/
 
-body {
-    background: #ddd;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-} 
-
-nav {
-    display: flex;
-    width: 100%;
-    padding: 1rem;
-    justify-content: space-between;
-    background: #444;
-    color: #ddd;
-    align-items: center;
+img {
+    float: left;
+    margin-right: 10px;
 }
 
-nav a{
-    padding: .25rem .5rem;
-    margin-left: 1rem;
-    background: #ddd;
-    color: #444;
-    text-decoration: none;
-    }
-
-nav a:hover{
-    background: #bbb;
-}
-
-#banner{
-    background: #888;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 1rem;
-    min-height: 10rem;
-    width: 100%;
-}
-
-#banner p{
-    background: #444;
-    color: #ddd;
-    padding: 1rem;
-}
-
-#layout {
-    width: 100%;
-    padding: 1rem;
-}
-
-.row {
-    display: flex;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-.row h2 {
-    width: 20vw;
-    min-width: 20vw;
-    text-align: right;
-    color: #20c;
-    border-right: 3px solid #20c;
-    padding: 0 1rem;
-    letter-spacing: .2em;
-    }
-
-.content {
-    flex: 1;
-    padding: 0 1rem;
-    line-height: 2em;
-}
-
-
-.project-row {
-    display: flex;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-.project-row:last-child{
-    margin-bottom: 0;
-}
-.project-col{
-   width: 100%;
-}
-
-
-
-.project{
-    border: 3px solid #20c;
-    min-height: 20vw;
-    margin-left: 1rem; 
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    flex: 1;
-    background-position: center center;
-    background-size: cover;
-    backdrop-filter: grayscale(20%);
-}
-.project1{background-image: url('http://placekitten.com/1600/900')}
-
-.project:hover{
-    backdrop-filter: grayscale(0%);
-}
-.project p{
-    background: #20c;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    color: #fff;
-}
-
-.large{
-    min-height: 40vw;
-    margin-top: 0;
-}
