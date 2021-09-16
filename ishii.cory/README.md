@@ -7,6 +7,8 @@
 - http://www.corytishii.com/aau/wnm617/ishii.cory
 - http://www.corytishii.com/aau/wnm617/ishii.cory/profile.html
 
+-http://www.corytishii.com/aau/wnm617/ishii.cory/initializr
+
 ## Perhaps Some Notes
 
 - Take note of how markdown works
