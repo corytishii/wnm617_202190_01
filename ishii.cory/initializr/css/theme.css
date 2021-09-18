@@ -1,4 +1,6 @@
-nav li
+nav li:nth-child(2) a {
+	background: blue;
+}
 
 .main {
 	display: flex;
@@ -14,3 +16,39 @@ nav li
 	float: none;
 	order: 2;
 }
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+body {
+	background: green;
+}
+
+nav {
+	background: #00ffcc;
+}
+
+.header-container {
+	background: #0066ff;
+}
+
+.header-container {
+	border-bottom: 40px solid #ff1a1a;
+}
+
+.footer-container,
+.main aside {
+	background: #ff9f80;
+}
+
+
+@media only screen and (max-width: 767px)
