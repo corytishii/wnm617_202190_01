@@ -1,15 +1,25 @@
 nav li:nth-child(2) a {
 	background: blue;
+
+}
+
+nav a:hover {
+	background: pink;
+}
+
+body {
+	font-family: Helvetica, Arial, Times New Roman;
 }
 
 .main {
 	display: flex;
 	gap: 20px;
+	flex-direction: row-reverse; 
 }
 
 .main aside {
-	float: none;
-	order: 1;
+	border: 0px solid purple; 
+	background: purple;
 }
 
 . main article {
@@ -45,10 +55,15 @@ nav {
 	border-bottom: 40px solid #ff1a1a;
 }
 
-.footer-container,
-.main aside {
-	background: #ff9f80;
+.footer-container{
+	border: 0px yellow;
+	background: yellow;
+
 }
 
 
-@media only screen and (max-width: 767px)
+@media only screen and (max-width: 767px) {
+	.main {
+		flex-direction: column;
+	}
+}
