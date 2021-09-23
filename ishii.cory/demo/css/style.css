@@ -1,0 +1,12 @@
+
+.accordian dt {
+background-color: #40a3c4;
+color: white;
+padding: 0.5em 1em;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+}
+
+.accordian dd {
+
+}

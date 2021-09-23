@@ -5,7 +5,7 @@
 - Add Some links 
 - http://www.corytishii.com/
 - http://www.corytishii.com/aau/wnm617/ishii.cory
-- http://www.corytishii.com/aau/wnm617/ishii.cory/profile.html
+- http://www.corytishii.com/aau/wnm617/ishii.cory/portfolio/profile.html
 
 -http://www.corytishii.com/aau/wnm617/ishii.cory/initializr
 
