@@ -13,7 +13,7 @@ $(()=>{
 
 
 	$(".tabgroup .tab").on("click",function(e){
-		Let index = $(this).index();
+		let index = $(this).index();
 
 		$(this).addClass("active")
 			.siblings().removeClass("active");

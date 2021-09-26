@@ -46,7 +46,7 @@ display: none;
 	border-color: var(--color-neutral-light);
 	cursor: pointer;
 }
-.tabgroup.tab:after {
+.tabgroup .tab:after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -56,17 +56,18 @@ display: none;
 	border-color: var(--color-main-medium);
 	transition: all 0.3s;
 }
-.tabgroup.tab.active:after {
+.tabgroup .tab.active:after {
 	height: 3px;
+	background: grey;
 
 }
-.tabgroup.contents {
+.tabgroup .contents {
 	height: 40vh;
 	position: relative;
 	overflow: hidden;
 
 }
-.tabgroup.content {
+.tabgroup .content {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -79,7 +80,10 @@ display: none;
 	opacity: 0;
 	transition: all 0.3s;
 }
-.tabgroup.content.active {
+/* Spaces between class names, imply that they're "nested' (inside the other element, in this case
+tabroup .content)
+No space means that the element has ALL have thess class */
+.tabgroup .content.active {
 	opacity: 1;
 	pointer-events: initial;
 }
