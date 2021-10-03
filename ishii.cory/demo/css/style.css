@@ -80,8 +80,8 @@ display: none;
 	opacity: 0;
 	transition: all 0.3s;
 }
-/* Spaces between class names, imply that they're "nested' (inside the other element, in this case
-tabroup .content)
+/* Spaces between class names, imply that they're "nested' (inside the other element, 
+in this case tabroup .content)
 No space means that the element has ALL have thess class */
 .tabgroup .content.active {
 	opacity: 1;

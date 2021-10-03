@@ -7,8 +7,12 @@
 - http://www.corytishii.com/aau/wnm617/ishii.cory
 - http://www.corytishii.com/aau/wnm617/ishii.cory/portfolio/profile.html
 
+### Side assignments
 - http://www.corytishii.com/aau/wnm617/ishii.cory/initializr
-- http://corytishii.com/aau/wnm617/ishii.cory/demo/jquery.html
+
+### Demo Code
+- http://www.corytishii.com/aau/wnm617/ishii.cory/demo/jquery.html
+- http://www.corytishii.com/aau/wnm617/ishii.cory/demo/jquerymobile.html
 
 ## Perhaps Some Notes
 

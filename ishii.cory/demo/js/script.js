@@ -13,7 +13,10 @@ $(()=>{
 
 
 	$(".tabgroup .tab").on("click",function(e){
-		let index = $(this).index();
+		let index = $(this).index(); //changed the let to lowercase// 
+		//looking at the tabgroup elelment 
+		//(tab 0 is the first child) (tab 2 is the second child)//
+
 
 		$(this).addClass("active")
 			.siblings().removeClass("active");
