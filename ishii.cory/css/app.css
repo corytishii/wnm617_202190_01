@@ -58,7 +58,19 @@ a{
 [data-role="main"] {
    flex: 1 1 100%;
 }
-[data-role="header"],
+[data-role="header"] {
+   flex: none;
+   height: var(--header-height);
+   line-height: var(--header-height);
+   border-width: 0;
+   background-color: var(--color-white);
+   box-shadow: 0 0 5px rgba(0,0,0,0.2);
+   width: 100%;
+   overflow: hidden;
+   /*changed position: relative; to fixed*/
+   /*added bottom: 0;*/
+}
+
 [data-role="footer"] {
    flex: none;
    height: var(--header-height);
@@ -66,8 +78,12 @@ a{
    border-width: 0;
    background-color: var(--color-white);
    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-   position: relative;
+   position: fixed; 
+   bottom: 0;
+   width: 100%;
    overflow: hidden;
+   /*changed position: relative; to fixed*/
+   /*added bottom: 0;*/
 }
 
 
@@ -120,6 +136,7 @@ a{
     outline: 0;
     font: inherit;
     justify-content: center;
+    text-align: center;
 }
 .form-button {
     width: 100%;
@@ -136,6 +153,43 @@ a{
     text-decoration: none;
 }
 .form-label {}
+
+/*responsible for changing the footer color*/
+footer ul { 
+	background: #ffb3b3;
+}
+
+/*https://www.w3schools.com/tags/tag_map.asp*/
+.map {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-image: url("../img/IMG_9092.PNG");
+	background-position: center center;
+	background-size: 135% 135%;
+}
+
+/*map pins: https://codepen.io/katia-trifonova/pen/zwZgdx*/
+
+.tracker {
+	border-radius: 1rem;
+	border-bottom-left-radius: 0; 
+	position: fixed;
+	background-color: #ffb3b3;
+
+	padding: .5rem;
+}
+
+.tracker-1 {
+	top: 15%;
+	left: 10%;
+}
+
+.tracker-2 {
+	top: 60%;
+	left: 60%;
+}
 
 /*
 html, body {

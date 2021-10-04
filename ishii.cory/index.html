@@ -30,18 +30,20 @@
                <input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
             </div>
             <div class="form-control">
-               <a href="#page-recent" class="form-button">Sign In</a>
+               <a href="#page-map" class="form-button">Sign In</a>
             </div>
          </form>
       </div>
    </section>
-   <section data-role="page" id="page-recent">
-      <div data-role="main">
-         MAP!
+   <section data-role="page" id="page-map">
+      <div data-role="main" class="map">
+      	<div class="tracker tracker-1">Coyote</div>
+      	<div class="tracker tracker-2">Pecock</div>
+
       </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#page-recent">Recent</a></li>
+            <li><a href="#page-map">Map</a></li>
             <li><a href="#page-list">List</a></li>
             <li><a href="#page-user-profile">Profile</a></li>
          </ul>
@@ -53,21 +55,21 @@
          <ul>
    
             <!-- li*10>a[href=#page-animal-profile]{Animal $} --> <!-- -->
-            <li><a href="#page-animal-profile">Peacock</a></li>
-            <li><a href="#page-animal-profile">Monkey</a></li>
-            <li><a href="#page-animal-profile">Flamingo</a></li>
-            <li><a href="#page-animal-profile">Bear</a></li>
-            <li><a href="#page-animal-profile">Tiger</a></li>
-            <li><a href="#page-animal-profile">Snake</a></li>
-            <li><a href="#page-animal-profile">Parrot</a></li>
-            <li><a href="#page-animal-profile">Squirrel</a></li>
-            <li><a href="#page-animal-profile">Deer</a></li>
-            <li><a href="#page-animal-profile">Coyote</a></li>
+            <li><a href="#page-animal-profile-1">Peacock</a></li>
+            <li><a href="#page-animal-profile-2">Monkey</a></li>
+            <li><a href="#page-animal-profile-3">Flamingo</a></li>
+            <li><a href="#page-animal-profile-4">Bear</a></li>
+            <li><a href="#page-animal-profile-5">Tiger</a></li>
+            <li><a href="#page-animal-profile-6">Snake</a></li>
+            <li><a href="#page-animal-profile-7">Parrot</a></li>
+            <li><a href="#page-animal-profile-8">Squirrel</a></li>
+            <li><a href="#page-animal-profile-9">Deer</a></li>
+            <li><a href="#page-animal-profile-10">Coyote</a></li>
          </ul>
       </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#page-recent">Recent</a></li> <!-- -->
+            <li><a href="#page-map">Map</a></li> <!-- -->
             <li><a href="#page-list">List</a></li>
             <li><a href="#page-user-profile">Profile</a></li>
          </ul>
@@ -75,12 +77,18 @@
    </section>
 
    <section data-role="page" id="page-user-profile">
+   	<header data-role="header">
+         <h1>User Profile</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
       <div data-role="main">
          USER PAGE!
       </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#page-recent">Recent</a></li><!-- -->
+            <li><a href="#page-map">Map</a></li><!-- -->
             <li><a href="#page-list">List</a></li>
             <li><a href="#page-user-profile">Profile</a></li>
          </ul>
@@ -94,6 +102,13 @@
             <li><a href="#" data-rel="back">Back</a></li>
          </ul>
       </header>
+      <footer data-role="footer">
+         <ul>
+            <li><a href="#page-map">Map</a></li><!-- -->
+            <li><a href="#page-list">List</a></li>
+            <li><a href="#page-user-profile">Profile</a></li>
+         </ul>
+      </footer>
       <div data-role="main">
          Animal!
       </div>
