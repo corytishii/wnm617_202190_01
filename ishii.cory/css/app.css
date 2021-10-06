@@ -136,7 +136,8 @@ a{
     outline: 0;
     font: inherit;
     justify-content: center;
-    text-align: center;
+    text-align: center; 
+    /*payed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
 }
 .form-button {
     width: 100%;
@@ -156,7 +157,7 @@ a{
 
 /*responsible for changing the footer color*/
 footer ul { 
-	background: #ffb3b3;
+	background: #F0A3C1;
 }
 
 /*https://www.w3schools.com/tags/tag_map.asp*/
@@ -171,7 +172,7 @@ footer ul {
 }
 
 /*map pins: https://codepen.io/katia-trifonova/pen/zwZgdx*/
-
+/*
 .tracker {
 	border-radius: 1rem;
 	border-bottom-left-radius: 0; 
@@ -179,8 +180,8 @@ footer ul {
 	background-color: #ffb3b3;
 
 	padding: .5rem;
-}
-
+}*/
+/*
 .tracker-1 {
 	top: 15%;
 	left: 10%;
@@ -190,23 +191,5 @@ footer ul {
 	top: 60%;
 	left: 60%;
 }
-
+*/
 /*
-html, body {
-	background: lightblue;
-	/* default 16px font size 16px = 1em / 1rem */
-/*}
-/*
-button {
-	border: 0px solid white;
-	background: var(--color-main-light);
-	color: var(--color-main-dark);
-	/* rem is root em => the root height of the letter */
-/*	border-radius: .25rem;
-
-	cursor: pointer;
-}
-
-.full-center{
-	display: 
-}
