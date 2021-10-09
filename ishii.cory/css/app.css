@@ -9,9 +9,17 @@
 
 	--color-blue: #A9E8FA;
 
+	--color-white: #fff;
+	--color-black: #111;
+
 	--header-height: 3rem;
 }
 
+
+	--font-sans: Helvetica, Arial, sans-serif;
+	--font-serif: Cambra, Georgia, serif;
+
+	--header-height: 3rem;
 * {
 	box-sizing: border-box;
 } 
@@ -20,6 +28,7 @@
 html, body {
 	background: lightblue;
 	/* default 16px font size 16px = 1em / 1rem */ 
+	font-family: var(--font-sans);
 }
 
 /* CORE ELEMENTS */
@@ -47,30 +56,44 @@ a{
 .flex-justify-center { justify-content:center; }
 .flex-vertical { flex-direction:column; }
 
+.overscroll { overflow: auto; }
+.overscroll-x { overflow-x: auto; }
+.overscroll-y { overflow-y: auto; }
+
+.overscroll {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+
+}
+
+.fill-parent {
+	width: 100%;
+	height: 100%;
+}
+
+.centered { text-align: center; }
+.small { font-size: 0.8em; }
 
 
 /* PAGE ELEMENTS */
 .ui-mobile .ui-page-active {
    display: flex;
    flex-direction: column;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   overflow: hidden;
 }
 
 [data-role="main"] {
    flex: 1 1 100%;
-}
-[data-role="header"] {
-   flex: none;
-   height: var(--header-height);
-   line-height: var(--header-height);
-   border-width: 0;
-   background-color: var(--color-white);
-   box-shadow: 0 0 5px rgba(0,0,0,0.2);
-   width: 100%;
+   position: relative;
    overflow: hidden;
-   /*changed position: relative; to fixed*/
-   /*added bottom: 0;*/
 }
-
+[data-role="header"],
 [data-role="footer"] {
    flex: none;
    height: var(--header-height);
@@ -78,10 +101,24 @@ a{
    border-width: 0;
    background-color: var(--color-white);
    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-   position: fixed; 
-   bottom: 0;
+   position: fixed;
    width: 100%;
    overflow: hidden;
+   /*changed position: relative; to fixed*/
+   /*added bottom: 0;*/
+}
+
+/*[data-role="footer"] {*/
+   /*flex: none;*/
+   /*height: var(--header-height);*/
+   /*line-height: var(--header-height);*/
+   /*border-width: 0;*/
+   /*background-color: var(--color-white);*/
+   /*box-shadow: 0 0 5px rgba(0,0,0,0.2);*/
+   /*position: fixed; */
+   /*bottom: 0;*/
+   /*width: 100%;*/
+   /*overflow: hidden;*/
    /*changed position: relative; to fixed*/
    /*added bottom: 0;*/
 }
@@ -126,7 +163,7 @@ a{
 .form-control {
    margin: 1em 0;
 }
-.form-input {
+.signin-form .form-input {
     width: 100%;
     display: inline-block;
     border: 1px solid var(--color-neutral-medium);
@@ -135,16 +172,34 @@ a{
     border-radius: 0.3em;
     outline: 0;
     font: inherit;
-    justify-content: center;
-    text-align: center; 
-    /*payed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
+    /*justify-content: center;*/
+    /*text-align: center; */
+    /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
 }
+.form-input {
+    width: 100%;
+    display: inline-block;
+    border-width: 0;
+    border-bottom: 1px solid var(--color-neutral-medium);
+    margin: 0;
+    padding: 0.5em 1em;
+    outline: 0;
+    background-color: transparent;
+    font: inherit;
+    /*justify-content: center;*/
+    /*text-align: center; */
+    /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
+}
+.form-form-button,
 .form-button {
     width: 100%;
     display: inline-block;
     border-width: 0;
     background-color: var(--color-main-light); 
+    margin: 0;
     padding: 0.5em 1em;
+    border-radius: 0.3em;
+    outline: 0;
     justify-content: center;
     border-radius: 0.3em;
     outline: 0;
@@ -153,16 +208,24 @@ a{
     cursor: pointer;
     text-decoration: none;
 }
-.form-label {}
+.ui-mobile .form-label {
+	font-size: 0.8em;
+	color: var(--color-neutral-medium);
+	margin: 1rem 0 0;
+}
 
 /*responsible for changing the footer color*/
 footer ul { 
 	background: #F0A3C1;
 }
 
+/*.ui*/
+
 /*https://www.w3schools.com/tags/tag_map.asp*/
+/*should I change "position:fixed;"" to "position:absolute;" ?*/
 .map {
 	position: fixed;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -171,7 +234,125 @@ footer ul {
 	background-size: 135% 135%;
 }
 
+
+
+
+
+/*Floater*/
+.floater { position: absolute; }
+.floater.left { left:1em; }
+.floater.right { right:1em; }
+.floater.top { top:1em; }
+.floater.bottom { bottom:1em; }
+
+
+/* Circle button*/
+.btn-circle {
+	background-color: var(--color-white);
+	width: 3rem;
+	height: 3rem;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	font-size: 2.4rem;
+	border-radius: 2em;
+	box-shadow: 2px 5px rgba(0,0,0,0.15);
+	/*display: inline-block;*/
+}
+
+/*MODAL*/
+.modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none; 
+	opacity: 0;
+	transition: all 0.3s;
+}
+.modal.active {
+	pointer-events: initial;
+	opacity: 1;
+}
+.modal-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+
+}
+/*Modal Popup*/
+.modal-popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,calc(-50% + 3em));
+	border-radius: 5px;
+	width: 80vmin;
+	overflow: hidden;
+	transition: all 0.3s;
+
+}
+.modal-body {
+	padding: 10px;
+	background-color: var(--color-white);
+}
+
+.modal-head, 
+.modal-foot {
+	background-color: var(--color-neutral-light);
+	line-height: 2rem;
+	padding: 0 1em;
+}
+.modal.active .modal-popup {
+	transform: translate(-50%,-50%);
+}
+
+/*Modal Drawer*/
+.modal-drawer {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.3s;
+	box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+.modal-drawer.left,
+.modal-drawer.right {
+	height: 100%;
+	width: 70vw;
+}
+.modal-drawer.left { left: 0; transform:translateX(-100%); }
+.modal-drawer.right { right: 0; transform:translateX(100%); }
+
+.modal-drawer.top,
+.modal-drawer.bottom {
+	height: 40vh;
+	width: 100%;
+}
+
+.modal-drawer.top { top: 0; transform:translateY(-100%); }
+.modal-drawer.bottom { bottom: 0; transform:translateY(100%); }
+
+.modal.active .modal-drawer {
+	transform: translate(0);
+}
+
+.modal-drawer .modal-body {
+	flex: 1 1 100%;
+}
+
+.icon {
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+}
+
+
 /*map pins: https://codepen.io/katia-trifonova/pen/zwZgdx*/
+
 /*
 .tracker {
 	border-radius: 1rem;
