@@ -1,7 +1,7 @@
 :root {
-	--color-neutral-light: #ddd;
-	--color-neutral-medium: #999;
-	--color-neutral-dark: #444;
+	--color-neutral-light: #def2f9;
+	--color-neutral-medium: #40a3c4;
+	--color-neutral-dark: #0f4557;
 
 	--color-main-light: #def2f9;
 	--color-main-medium: #40a3c4 ;
@@ -93,7 +93,6 @@ a{
    position: relative;
    overflow: hidden;
 }
-[data-role="header"],
 [data-role="footer"] {
    flex: none;
    height: var(--header-height);
@@ -105,22 +104,22 @@ a{
    width: 100%;
    overflow: hidden;
    /*changed position: relative; to fixed*/
-   /*added bottom: 0;*/
+   bottom: 0;
 }
+[data-role="header"] {
+   flex: none;
+   height: var(--header-height);
+   line-height: var(--header-height);
+   border-width: 0;
+   background-color: var(--color-white);
+   box-shadow: 0 0 5px rgba(0,0,0,0.2);
+   position: fixed; 
+   bottom: 0;
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+   bottom: 0;
 
-/*[data-role="footer"] {*/
-   /*flex: none;*/
-   /*height: var(--header-height);*/
-   /*line-height: var(--header-height);*/
-   /*border-width: 0;*/
-   /*background-color: var(--color-white);*/
-   /*box-shadow: 0 0 5px rgba(0,0,0,0.2);*/
-   /*position: fixed; */
-   /*bottom: 0;*/
-   /*width: 100%;*/
-   /*overflow: hidden;*/
-   /*changed position: relative; to fixed*/
-   /*added bottom: 0;*/
 }
 
 
@@ -161,7 +160,11 @@ a{
 /* FORM ELEMENTS */
 .form {}
 .form-control {
-   margin: 1em 0;
+   margin-top: 1em;
+   margin-right: 5.5em;
+   margin-bottom: 1em;
+   margin-left: 3.5em;
+
 }
 .signin-form .form-input {
     width: 100%;
@@ -243,7 +246,7 @@ footer ul {
 .floater.left { left:1em; }
 .floater.right { right:1em; }
 .floater.top { top:1em; }
-.floater.bottom { bottom:1em; }
+.floater.bottom { bottom:3em; }
 
 
 /* Circle button*/
@@ -350,10 +353,31 @@ footer ul {
 	display: inline-block;
 }
 
+.nav-icon {
+	display: block;
+	line-height: 2rem;
+	font-size: 1.5rem;
+}
+
+.nav-icon-title {
+	display: block;
+}
+
+.nav-icon .icon {
+   vertical-align: middle;
+}
+.nav-icon-label {
+   display: block;
+   line-height: 1rem;
+   font-size: 0.7rem;
+}
+.nav-icon-set li.active {
+   background-color: var(--color-main-light);
+}
 
 /*map pins: https://codepen.io/katia-trifonova/pen/zwZgdx*/
 
-/*
+
 .tracker {
 	border-radius: 1rem;
 	border-bottom-left-radius: 0; 
@@ -361,8 +385,8 @@ footer ul {
 	background-color: #ffb3b3;
 
 	padding: .5rem;
-}*/
-/*
+}
+
 .tracker-1 {
 	top: 15%;
 	left: 10%;
@@ -372,5 +396,40 @@ footer ul {
 	top: 60%;
 	left: 60%;
 }
-*/
-/*
+
+/* ANIMAL LIST */
+.animallist {
+   list-style-type: none;
+   margin: 0;
+   padding: 1em;
+}
+.animallist-item~.animallist-item {
+   margin-top: 1em;
+}
+.animallist-item a {
+    box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
+    border-radius: 1em;
+    overflow: hidden;
+    font-weight: normal;
+}
+.animallist-item-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+.animallist-item-description {
+}
+.animallist-item-name {
+   font-size: 1.5em;
+}
+.animallist-item-type,
+.animallist-item-breed {
+   font-size: 0.9em;
+}
+
+.js-logout {
+	margin-left: 4em;
+	margin-right: 6em;
+	padding: 
+}

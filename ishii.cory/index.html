@@ -70,6 +70,8 @@
    <section data-role="page" id="page-recent">
       <div data-role="main">
          <div class="map"></div>
+         <div class="tracker tracker-1">Coyote</div>
+      <div class="tracker tracker-2">Pecock</div>
 
          <div class="floater bottom right">
             <a href="#" class="btn-circle" data-activate="#recent-add-modal">&plus;</a>
@@ -82,7 +84,7 @@
                <div class="modal-head display-flex">
                   <div class="flex-stretch">Drawer</div>
                   <div class="flex-none">
-                     <img src="img/icons/close.png" alt="" class="icon" data-deactivate="#recent-add-modal">
+                     <img src="img/icons/icon-close.svg" alt="" class="icon" data-deactivate="#recent-add-modal">
                   </div>
                </div>
                <div class="modal-body" data role="menu">
@@ -96,80 +98,26 @@
             </div>
          </div>
       </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#page-recent">Map</a></li>
-            <li><a href="#page-list">List</a></li>
-            <li><a href="#page-user-profile">User Profile</a></li>
-         </ul>
-      </footer>
+       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
    <section data-role="page" id="page-list">
       <div data-role="main">
          <div class="overscroll floater fill-parent">
-            <ul>
-               <!-- li*10>a[href=#page-animal-profile]{Animal $} -->
-               <li><a href="#page-animal-profile">Animal 1</a></li> <!--add/change "#page-animal-profile-1"-->
-               <li><a href="#page-animal-profile">Animal 2</a></li>
-               <li><a href="#page-animal-profile">Animal 3</a></li>
-               <li><a href="#page-animal-profile">Animal 4</a></li>
-               <li><a href="#page-animal-profile">Animal 5</a></li>
-               <li><a href="#page-animal-profile">Animal 6</a></li>
-               <li><a href="#page-animal-profile">Animal 7</a></li>
-               <li><a href="#page-animal-profile">Animal 8</a></li>
-               <li><a href="#page-animal-profile">Animal 9</a></li>
-               <li><a href="#page-animal-profile">Animal 10</a></li>
-               <li><a href="#page-animal-profile">Animal 11</a></li>
-               <li><a href="#page-animal-profile">Animal 12</a></li>
-               <li><a href="#page-animal-profile">Animal 13</a></li>
-               <li><a href="#page-animal-profile">Animal 14</a></li>
-               <li><a href="#page-animal-profile">Animal 15</a></li>
-               <li><a href="#page-animal-profile">Animal 16</a></li>
-               <li><a href="#page-animal-profile">Animal 17</a></li>
-               <li><a href="#page-animal-profile">Animal 18</a></li>
-               <li><a href="#page-animal-profile">Animal 19</a></li>
-               <li><a href="#page-animal-profile">Animal 20</a></li>
-               <li><a href="#page-animal-profile">Animal 21</a></li>
-               <li><a href="#page-animal-profile">Animal 22</a></li>
-               <li><a href="#page-animal-profile">Animal 23</a></li>
-               <li><a href="#page-animal-profile">Animal 24</a></li>
-               <li><a href="#page-animal-profile">Animal 25</a></li>
-               <li><a href="#page-animal-profile">Animal 26</a></li>
-               <li><a href="#page-animal-profile">Animal 27</a></li>
-               <li><a href="#page-animal-profile">Animal 28</a></li>
-               <li><a href="#page-animal-profile">Animal 29</a></li>
-               <li><a href="#page-animal-profile">Animal 30</a></li>
-               <li><a href="#page-animal-profile">Animal 31</a></li>
-               <li><a href="#page-animal-profile">Animal 32</a></li>
-               <li><a href="#page-animal-profile">Animal 33</a></li>
-               <li><a href="#page-animal-profile">Animal 34</a></li>
-               <li><a href="#page-animal-profile">Animal 35</a></li>
-               <li><a href="#page-animal-profile">Animal 36</a></li>
-               <li><a href="#page-animal-profile">Animal 37</a></li>
-               <li><a href="#page-animal-profile">Animal 38</a></li>
-               <li><a href="#page-animal-profile">Animal 39</a></li>
-               <li><a href="#page-animal-profile">Animal 40</a></li>
-               <li><a href="#page-animal-profile">Animal 41</a></li>
-               <li><a href="#page-animal-profile">Animal 42</a></li>
-               <li><a href="#page-animal-profile">Animal 43</a></li>
-               <li><a href="#page-animal-profile">Animal 44</a></li>
-               <li><a href="#page-animal-profile">Animal 45</a></li>
-               <li><a href="#page-animal-profile">Animal 46</a></li>
-               <li><a href="#page-animal-profile">Animal 47</a></li>
-               <li><a href="#page-animal-profile">Animal 48</a></li>
-               <li><a href="#page-animal-profile">Animal 49</a></li>
-               <li><a href="#page-animal-profile">Animal 50</a></li>
-               <li><a href="#page-animal-profile">Animal 1</a></li><!--add/change "#page-animal-profile-1"-->
-               <li><a href="#page-animal-profile">Animal 2</a></li><!--add/change "#page-animal-profile-2"-->
-               <li><a href="#page-animal-profile">Animal 3</a></li><!--add/change "#page-animal-profile-3"-->
-               <li><a href="#page-animal-profile">Animal 4</a></li><!--add/change "#page-animal-profile-4"-->
-               <li><a href="#page-animal-profile">Animal 5</a></li><!--add/change "#page-animal-profile-5"-->
-               <li><a href="#page-animal-profile">Animal 6</a></li><!--add/change "#page-animal-profile-6"-->
-               <li><a href="#page-animal-profile">Animal 7</a></li><!--add/change "#page-animal-profile-7"-->
-               <li><a href="#page-animal-profile">Animal 8</a></li><!--add/change "#page-animal-profile-8"-->
-               <li><a href="#page-animal-profile">Animal 9</a></li><!--add/change "#page-animal-profile-9"-->
-               <li><a href="#page-animal-profile">Animal 10</a></li><!--add/change "#page-animal-profile-10"-->
+            <ul class="animallist">
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
+               <li class="animallist-item" data-template="#animallist-item-template"></li>
             </ul>
          </div>
 
@@ -177,13 +125,7 @@
             <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
          </div>
       </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#page-recent">Map</a></li>
-            <li><a href="#page-list">List</a></li>
-            <li><a href="#page-user-profile">User Profile</a></li>
-         </ul>
-      </footer>
+       <footer data-role="footer" data-template="#footer-template"></footer>
 
       <div class="modal" id="list-add-modal">
          <div class="modal-back" data-deactivate="#list-add-modal"></div>
@@ -217,13 +159,7 @@
             <button class="form-button js-logout">Log Out</button>
          </div>
       </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#page-recent">Map</a></li>
-            <li><a href="#page-list">List</a></li>
-            <li><a href="#page-user-profile">User Profile</a></li>
-         </ul>
-      </footer>
+      <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
    <section data-role="page" id="page-animal-profile">
@@ -236,7 +172,40 @@
       <div data-role="main">
          Animal!
       </div>
+       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
+
+<!-- Templates --> <!-- Reminder:insert my own icons --> 
+<script type="text/template" id="footer-template">
+   <ul class="nav-icon-set">
+      <li><a href="#page-recent" data-activateone=".nav-icon-set li:nth-child(1)">
+         <span class="nav-icon"><img class="icon" src="img/icons/icon-location.svg"></span>
+         <span class="nav-icon-label">Map</span>
+      </a></li>
+      <li><a href="#page-list" data-activateone=".nav-icon-set li:nth-child(2)">
+         <span class="nav-icon"><img class="icon" src="img/icons/icon-list.svg"></span>
+         <span class="nav-icon-label">List</span>
+      </a></li>
+      <li><a href="#page-user-profile" data-activateone=".nav-icon-set li:nth-child(3)">
+         <span class="nav-icon"><img class="icon" src="img/icons/icon-profile.svg"></span>
+         <span class="nav-icon-label">Profile</span>
+      </a></li>
+   </ul>
+   </script>
+
+
+   <script type="text/template" id="animallist-item-template">
+   <a href="#page-animal-profile" class="display-flex">
+      <div class="flex-none animallist-item-image">
+         <img src="https://via.placeholder.com/400x400?text=Animal" alt="">
+      </div>
+      <div class="flex-stretch animallist-item-body padding-md">
+         <div class="animallist-item-name">Animal</div>
+         <div class="animallist-item-type"><strong>Type</strong> Animal</div>
+         <div class="animallist-item-breed"><strong>Breed</strong> Animal</div>
+      </div>
+   </a>
+   </script>
    
 </body>
 </html>
