@@ -227,7 +227,7 @@ footer ul {
 /*https://www.w3schools.com/tags/tag_map.asp*/
 /*should I change "position:fixed;"" to "position:absolute;" ?*/
 .map {
-	position: fixed;
+	position: absolute;
 	left: 0;
 	width: 100%;
 	height: 100%;
@@ -426,6 +426,26 @@ footer ul {
 .animallist-item-type,
 .animallist-item-breed {
    font-size: 0.9em;
+}
+
+/* ANIMAL PROFILE */
+.animal-profile-top {
+   flex: none;
+   height: 40vh;
+}
+.animal-profile-bottom {
+   flex: 1 1 auto;
+   position: relative;
+}
+
+
+.floating-header {
+   position: absolute;
+   background-color: rgba(255,255,255,0.15);
+   width: 100%;
+   top: 0;
+   left: 0;
+   box-shadow: none;
 }
 
 .js-logout {
