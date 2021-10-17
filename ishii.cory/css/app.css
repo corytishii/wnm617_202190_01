@@ -210,6 +210,7 @@ a{
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+
 }
 .ui-mobile .form-label {
 	font-size: 0.8em;
@@ -452,4 +453,74 @@ footer ul {
 	margin-left: 4em;
 	margin-right: 6em;
 	padding: 
+}
+
+#page-user-profile {
+
+}
+/**/
+#page-user-profile li {
+	list-style-type:none;	
+}
+
+.page {
+
+}
+
+#button {
+	display:flex;
+	justify-content:center;
+}
+/*User profile button*/
+#button .profile-logout {
+	width: 40%;
+    display: inline-block;
+    border-width: 0;
+    background-color: var(--color-main-light); 
+    margin: 0;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    outline: 0;
+    justify-content: center;
+    border-radius: 0.3em;
+    outline: 0;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+#profile-list{
+	display:flex;
+	justify-content: center;
+}
+/*User placeholder i*/
+.card {
+	display: flex;
+	justify-content: center;
+}
+
+#contain-profile{
+	position: absolute;
+	top: 25%;
+}
+
+#test-logout {
+	position:relative;
+	bottom: 8%;
+}
+
+.animal-profile-top img {
+	height: 100%;
+	width: 100%;
+
+}
+#back-button{
+	background-color:var(--color-main-light);
+	border:solid;
+	border-color: var(--color-main-light);
+
+}
+#animal-profile-li {
+	list-style-type:none;	
 }

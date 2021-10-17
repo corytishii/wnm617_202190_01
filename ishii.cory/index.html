@@ -157,12 +157,27 @@
 <!-- User Profile -->
    <section data-role="page" id="page-user-profile">
       <div data-role="main" class="overscroll">
-         USER!
+      	<div id="contain-profile">
          <div class="card">
          	<img src="https://via.placeholder.com/600x600?text=User" alt="" style="width:50%;height:50%;object-fit:cover">
+         </div class="user-profile-information">
+         <div id="profile-list">
+         	<ul id="static-user-profile-information">
+         		<li>Name: Mary Kimbal</li>
+         		<li>Member: Since Febuary 2019</li>
+         	</ul>
          </div>
-         <div>
-            <button class="form-button js-logout">Log Out</button>
+      	 <!-- <div id="button">
+           	<button class="form-button js-logout">Log Out</button> 
+           	 <button class="profile-logout">Log Out</button>
+         </div> -->
+     	</div>
+
+      </div>
+      <div id="test-logout">
+      	 <div id="button">
+           <!-- <button class="form-button js-logout">Log Out</button> -->
+            <button class="profile-logout js-logout ui-btn ui-shadow ui-corner-all">Log Out</button>
          </div>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
@@ -172,10 +187,10 @@
   <section data-role="page" id="page-animal-profile">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="animal-profile-top">
-            <img src="https://via.placeholder.com/600x600?text=Animal" alt="" style="width:100%;height:100%;object-fit:cover">
+            <img src="img/animals/lukas-souza-vjFC9OjrOtA-unsplash.jpg" alt="">
          </div>
          <div class="animal-profile-middle">
-            <ul class="nav">
+            <ul class="nav" id="animal-profile-li">
                <li>location</li>
                <li>description</li>
             </ul>
@@ -186,7 +201,7 @@
       </div>
       <header data-role="header" class="floating-header">
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li id= "back-button"><a href="#" data-rel="back">Back</a></li>
          </ul>
       </header>
    </section>
