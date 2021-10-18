@@ -23,6 +23,10 @@
    <section data-role="page" id="page-signin">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
+         <div class="flex-control-center">
+         	<img class="intro-logo" src="img/logo/logo-animal tracking.svg" alt="logo">
+         	
+         </div>
          <form data-ajax="false" class="form signin-form" id="signin-form" style="padding:10px">
             <div class="form-control">
                <input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Username">
@@ -72,7 +76,7 @@
       <div data-role="main">
          <div class="map"></div>
          <div class="tracker tracker-1">Coyote</div>
-      <div class="tracker tracker-2">Pecock</div>
+      <div class="tracker tracker-2">Peacock</div>
 
          <div class="floater bottom right">
             <a href="#" class="btn-circle" data-activate="#recent-add-modal">&plus;</a>
@@ -123,6 +127,7 @@
             </ul>
          </div>
 
+<!-- Adding animal page -->
          <div class="floater bottom right">
             <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
          </div>
@@ -157,13 +162,13 @@
 <!-- User Profile -->
    <section data-role="page" id="page-user-profile">
       <div data-role="main" class="overscroll">
-      	<div id="contain-profile">
-         <div class="card">
-         	<img src="https://via.placeholder.com/600x600?text=User" alt="" style="width:50%;height:50%;object-fit:cover">
+      	<div id="contain-profile" class="user-profile-top">
+         <div class="user-profile-top">
+         	<img src="img/users/zoe-fernandez--zqoE7jnQgw-unsplash.jpg">
          </div class="user-profile-information">
          <div id="profile-list">
          	<ul id="static-user-profile-information">
-         		<li>Name: Mary Kimbal</li>
+         		<li>Name: Mary Kimball</li>
          		<li>Member: Since Febuary 2019</li>
          	</ul>
          </div>
@@ -187,7 +192,8 @@
   <section data-role="page" id="page-animal-profile">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="animal-profile-top">
-            <img src="img/animals/lukas-souza-vjFC9OjrOtA-unsplash.jpg" alt="">
+            <img src="img/animals/lukas-souza-vjFC9OjrOtA-unsplash.jpg" alt=""> 
+            <!-- image credit: https://unsplash.com/photos/vjFC9OjrOtA -->
          </div>
          <div class="animal-profile-middle">
             <ul class="nav" id="animal-profile-li">
@@ -206,6 +212,7 @@
       </header>
    </section>
 
+<!-- Add Animal Tab -->
    <section data-role="page" id="page-animal-add">
       <header data-role="header">
          <h1>Add Animal!</h1>
@@ -282,6 +289,8 @@
    </section>
 
 <!-- Templates --> 
+
+<!-- Template: Navigation -->
 <script type="text/template" id="footer-template">
    <ul class="nav-icon-set">
       <li><a href="#page-recent" data-activateone=".nav-icon-set li:nth-child(1)">
@@ -299,11 +308,12 @@
    </ul>
    </script>
 
-
+<!-- Template Animal list arrangement -->
+<!-- image credit: https://unsplash.com/photos/vjFC9OjrOtA -->
    <script type="text/template" id="animallist-item-template">
    <a href="#page-animal-profile" class="display-flex">
       <div class="flex-none animallist-item-image">
-         <img src="https://via.placeholder.com/400x400?text=Animal" alt="">
+         <img src="img/animals/lukas-souza-vjFC9OjrOtA-unsplash.jpg" alt=""> 
       </div>
       <div class="flex-stretch animallist-item-body padding-md">
          <div class="animallist-item-name">Animal</div>

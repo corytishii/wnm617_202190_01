@@ -499,22 +499,26 @@ footer ul {
 	display: flex;
 	justify-content: center;
 }
-
+/* profile container */
 #contain-profile{
 	position: absolute;
 	top: 25%;
 }
 
+/*log out button*/
 #test-logout {
 	position:relative;
 	bottom: 8%;
 }
 
+/*animal profile picture*/
 .animal-profile-top img {
 	height: 100%;
 	width: 100%;
 
 }
+
+/*back button*/
 #back-button{
 	background-color:var(--color-main-light);
 	border:solid;
@@ -524,3 +528,21 @@ footer ul {
 #animal-profile-li {
 	list-style-type:none;	
 }
+
+/* user profile image */
+.user-profile-top img {
+	height: 30%;
+	width: 30%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+/* logo */
+.flex-col-center-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
