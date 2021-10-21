@@ -19,7 +19,7 @@
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-
+<!-- Sign In page -->
    <section data-role="page" id="page-signin">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
@@ -35,7 +35,7 @@
                <input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
             </div>
             <div class="form-control">
-               <input type="submit" value="Sign In" class="form-button">
+               <input type="submit" value="Sign In" class="form-button" data-role="none">
             </div>
             <div class="form-control small centered">
                Need a new account? <a href="#page-signup">Sign Up</a>
@@ -44,6 +44,7 @@
       </div>
    </section>
 
+<!-- Sign Up page -->
    <section data-role="page" id="page-signup">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
@@ -61,7 +62,7 @@
                <input class="form-input" type="password" id="signup-password2" data-role="none" placeholder="Confirm">
             </div>
             <div class="form-control">
-               <input type="submit" value="Sign Up" class="form-button">
+               <input type="submit" value="Sign Up" class="form-button" data-role="none">
             </div>
             <div class="form-control small centered">
                Already have an account? <a href="#page-signin">Sign In</a>
@@ -200,16 +201,37 @@
                <li>location</li>
                <li>description</li>
             </ul>
+            <a href="#page-animal-edit-form" id="page-animal-edit-button">Edit</a>
          </div>
-         <div class="animal-profile-bottom">
-            <div class="map"></div>
-         </div>
+         
       </div>
       <header data-role="header" class="floating-header">
          <ul>
             <li id= "back-button"><a href="#" data-rel="back">Back</a></li>
          </ul>
       </header>
+   </section>
+
+   <section data-role="page" id="page-animal-edit-form">
+   	<div class="animal-profile-bottom">
+   		<li id= "back-button"><a href="#" data-rel="back">Back</a></li>
+            <form action="" class="animal-profile-edit-form">
+            	<label>
+  					Animal Name
+            	</label>
+            	<input type="text" placeholder="Name">
+
+            	<label>
+  					Animal Type
+            	</label>
+            	<input type="text" placeholder="Type">
+
+            	<label>
+  					Animal Breed
+            	</label>
+            	<input type="text" placeholder="Breed">
+            </form>
+         </div>
    </section>
 
 <!-- Add Animal Tab -->

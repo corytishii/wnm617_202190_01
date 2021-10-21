@@ -49,7 +49,7 @@ a{
 .display-block { display:block; }
 .display-inline-block { display:inline-block; }
 
-.flex-stretch { flex: 1 1 auto; }
+.flex-stretch { flex: 1 1 auto; padding: 20px; }
 .flex-none { flex: none; }
 
 .flex-align-center { align-items:center; }
@@ -160,12 +160,15 @@ a{
 /* FORM ELEMENTS */
 .form {}
 .form-control {
-   margin-top: 1em;
-   margin-right: 5.5em;
-   margin-bottom: 1em;
-   margin-left: 3.5em;
-
+   
 }
+
+.signin-form {
+	width: 80%;
+	margin: auto;
+}
+
+
 .signin-form .form-input {
     width: 100%;
     display: inline-block;
@@ -175,6 +178,7 @@ a{
     border-radius: 0.3em;
     outline: 0;
     font: inherit;
+    box-sizing: border-box;
     /*justify-content: center;*/
     /*text-align: center; */
     /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
@@ -515,6 +519,7 @@ footer ul {
 .animal-profile-top img {
 	height: 100%;
 	width: 100%;
+	object-fit: cover;
 
 }
 
@@ -546,3 +551,31 @@ footer ul {
     align-items: center;
 }
 
+/* Animal Edit Form */
+.animal-profile-edit-form {
+	width: 80%;
+	/*centering*/
+	margin: auto;
+
+
+}
+
+.animal-profile-edit-form > div {
+	max-width: 100%;
+}
+
+::placeholder {      
+	/*pseudo element*/
+	/*change holder*/
+	color: #000;
+	opacity: 1;
+}
+
+/* Animal */
+.page-animal-edit-button {
+
+}
+/*sign in button*/
+.form-control.center-margin {
+margin: auto;
+}
