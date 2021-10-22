@@ -168,7 +168,7 @@ a{
 	margin: auto;
 }
 
-
+/* Sign in forms & buttons */
 .signin-form .form-input {
     width: 100%;
     display: inline-block;
@@ -571,11 +571,31 @@ footer ul {
 	opacity: 1;
 }
 
-/* Animal */
+/* Edit Animal button */
 .page-animal-edit-button {
 
 }
+
 /*sign in button*/
 .form-control.center-margin {
-margin: auto;
+	margin: auto;
+}
+
+/*Edit User button*/
+.page-user-edit-button {
+	width: 40%;
+    display: inline-block;
+    border-width: 0;
+    background-color: var(--color-main-light); 
+    margin: 0;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    outline: 0;
+    justify-content: center;
+    border-radius: 0.3em;
+    outline: 0;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
 }

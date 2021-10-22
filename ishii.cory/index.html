@@ -34,7 +34,7 @@
             <div class="form-control">
                <input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
             </div>
-            <div class="form-control">
+            <div class="form-control center-margin">
                <input type="submit" value="Sign In" class="form-button" data-role="none">
             </div>
             <div class="form-control small centered">
@@ -172,6 +172,7 @@
          		<li>Name: Mary Kimball</li>
          		<li>Member: Since Febuary 2019</li>
          	</ul>
+         	<a href="#page-user-edit-form" id="page-user-edit-button" data-role="none">Edit</a>
          </div>
       	 <!-- <div id="button">
            	<button class="form-button js-logout">Log Out</button> 
@@ -189,6 +190,30 @@
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
+   <!-- Editing User Profile page -->
+
+   <section data-role="page" id="page-user-edit-form">
+   	<div class="user-profile-bottom">
+   		<li id= "back-button"><a href="#" data-rel="back">Back</a></li>
+            <form action="" class="user-profile-edit-form">
+            	<label>
+  					Change Address
+            	</label>
+            	<input type="text" placeholder="Address">
+
+            	<label>
+  					Change Email
+            	</label>
+            	<input type="text" placeholder="Email">
+
+            	<label>
+  					Change Password
+            	</label>
+            	<input type="text" placeholder="Password">
+            </form>
+         </div>
+   </section>
+
 <!-- Animal Profile/Pages -->
   <section data-role="page" id="page-animal-profile">
       <div data-role="main" class="display-flex flex-vertical">
@@ -201,7 +226,7 @@
                <li>location</li>
                <li>description</li>
             </ul>
-            <a href="#page-animal-edit-form" id="page-animal-edit-button">Edit</a>
+            <a href="#page-animal-edit-form" id="page-animal-edit-button" data-role="none">Edit</a>
          </div>
          
       </div>
@@ -212,6 +237,7 @@
       </header>
    </section>
 
+<!-- Editing an animal -->
    <section data-role="page" id="page-animal-edit-form">
    	<div class="animal-profile-bottom">
    		<li id= "back-button"><a href="#" data-rel="back">Back</a></li>
@@ -230,6 +256,9 @@
   					Animal Breed
             	</label>
             	<input type="text" placeholder="Breed">
+
+            	<!-- Submit Button? -->
+            		<button type="submit" form="page-animal-edit-form" value="Submit">Submit</button>
             </form>
          </div>
    </section>
