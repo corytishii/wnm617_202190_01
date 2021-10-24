@@ -198,11 +198,13 @@ a{
     /*text-align: center; */
     /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
 }
+
+/* Form buttons for adding animals */
 .form-form-button,
 .form-button {
-    width: 100%;
+    width: 80%;
     display: inline-block;
-    border-width: 0;
+    /*border-width: 0;*/
     background-color: var(--color-main-light); 
     margin: 0;
     padding: 0.5em 1em;
@@ -600,4 +602,14 @@ footer ul {
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+}
+
+/*Map-Adding animal*/
+.floater-top-right {
+
+}
+
+/* Map-Choosing animal */
+.page-location-choose-animal {
+
 }

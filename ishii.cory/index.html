@@ -83,7 +83,7 @@
             <a href="#" class="btn-circle" data-activate="#recent-add-modal">&plus;</a>
          </div>
 
-
+<!-- Drawer -->
          <div class="modal" id="recent-add-modal">
             <div class="modal-back" data-deactivate="#recent-add-modal"></div>
             <div class="modal-drawer left">
@@ -99,7 +99,10 @@
                      <li><a href="#page-user-profile"><i class="fa fa-user-o"></i>&nbsp; User Profile</a></li>
                      <li><a href="#page-animal-profile"><i class="fa fa-user-o"></i>&nbsp; Animal Profile</a></li>
                   </ul>
-                  Body
+                  Add animal to map
+                  <div class="floater-top-right">
+                  	<a href="#page-location-choose-animal" class="btn-circle">&plus;</a>
+                  </div>
                </div>
             </div>
          </div>
@@ -172,8 +175,9 @@
          		<li>Name: Mary Kimball</li>
          		<li>Member: Since Febuary 2019</li>
          	</ul>
-         	<a href="#page-user-edit-form" id="page-user-edit-button" data-role="none">Edit</a>
+         	
          </div>
+         <a href="#page-user-edit-form" id="page-user-edit-button" data-role="none">Edit</a>
       	 <!-- <div id="button">
            	<button class="form-button js-logout">Log Out</button> 
            	 <button class="profile-logout">Log Out</button>
@@ -291,12 +295,13 @@
             </div>
             <div class="flex-none padding-md">
                <!-- <button type="submit" class="form-button">Save</button> -->
-               <a href="#page-list" class="form-button" data-role="none">Save</a>
+               <button><a href="#page-list" class="form-button" data-role="none">Save</a></button>
             </div>
          </form>
       </div>
    </section>
 
+<!-- Pages for choosing an animal, location, & description -->
    <section data-role="page" id="page-location-choose-animal">
       <header data-role="header">
          <h1>Choose Animal</h1>
@@ -307,13 +312,20 @@
          </ul>
       </header>
       <div data-role="main">
-         Animal!
+         Choose an Animal!
+
+         <!-- Inserted a button -->
+
+      	<div class="flex-none padding-md">
+      		<a href="#page-location-set-location" class="form-button">Next!</a>
+      	</div>
       </div>
+
    </section>
 
    <section data-role="page" id="page-location-set-location">
       <header data-role="header">
-         <h1>Set Location</h1>
+         <h1>Choose a location</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
@@ -321,13 +333,20 @@
          </ul>
       </header>
       <div data-role="main">
-         Animal!
+         Choose a location
+
+		<!-- Inserted a button -->
+
+		<div class="flex-none padding-md">
+      		<a href="#page-location-description" class="form-button">Next!</a>
+      	</div>
       </div>
+
    </section>
 
    <section data-role="page" id="page-location-description">
       <header data-role="header">
-         <h1>Description</h1>
+         <h1>Animal Description</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
@@ -335,7 +354,14 @@
          </ul>
       </header>
       <div data-role="main">
-         Animal!
+         Animal Description
+
+         <!-- Inserted a button -->
+
+         <div class="flex-none padding-md">
+      		<a href="#page-list" class="form-button">Save!</a>
+      	</div>
+
       </div>
    </section>
 
