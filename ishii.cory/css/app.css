@@ -175,7 +175,8 @@ a{
     border: 1px solid var(--color-neutral-medium);
     margin: 0;
     padding: 0.5em 1em;
-    border-radius: 0.3em;
+    border-radius: 50px;
+    /* changed border-radius: 0.3em; to border-radius: 50px;*/
     outline: 0;
     font: inherit;
     box-sizing: border-box;
@@ -205,10 +206,10 @@ a{
     background-color: var(--color-main-light); 
     margin: 0;
     padding: 0.5em 1em;
-    border-radius: 0.3em;
+    border-radius: 50px;
     outline: 0;
     justify-content: center;
-    border-radius: 0.3em;
+    /*border-radius: 0.3em;*/
     outline: 0;
     font: inherit;
     text-align: center;
@@ -483,10 +484,10 @@ footer ul {
     background-color: var(--color-main-light); 
     margin: 0;
     padding: 0.5em 1em;
-    border-radius: 0.3em;
+    /*border-radius: 0.3em; */
     outline: 0;
     justify-content: center;
-    border-radius: 0.3em;
+    border-radius: 50px;
     outline: 0;
     font: inherit;
     text-align: center;
@@ -513,6 +514,7 @@ footer ul {
 #test-logout {
 	position:relative;
 	bottom: 8%;
+	border-radius: 50px;
 }
 
 /*animal profile picture*/
@@ -589,10 +591,10 @@ footer ul {
     background-color: var(--color-main-light); 
     margin: 0;
     padding: 0.5em 1em;
-    border-radius: 0.3em;
+    /*border-radius: 0.3em;*/
     outline: 0;
     justify-content: center;
-    border-radius: 0.3em;
+    border-radius: 50px;
     outline: 0;
     font: inherit;
     text-align: center;
