@@ -204,9 +204,10 @@ a{
 .form-button {
     width: 80%;
     display: inline-block;
-    /*border-width: 0;*/
+    border: none;
     background-color: var(--color-main-light); 
-    margin: 0;
+    margin: 5px 2;
+    /* 5px top & bottom, the 0 is left & right */
     padding: 0.5em 1em;
     border-radius: 50px;
     outline: 0;
@@ -296,7 +297,7 @@ footer ul {
 
 }
 /*Modal Popup*/
-.modal-popup {
+.modal-popup 
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -318,6 +319,15 @@ footer ul {
 	line-height: 2rem;
 	padding: 0 1em;
 }
+
+/* Modal-Foot for add animal "save button" in list page*/
+.modal-foot {
+	background-color: var(--color-white);
+	line-height: 2rem;
+
+	
+}
+
 .modal.active .modal-popup {
 	transform: translate(-50%,-50%);
 }
@@ -353,6 +363,7 @@ footer ul {
 
 .modal-drawer .modal-body {
 	flex: 1 1 100%;
+	background: white;
 }
 
 .icon {
@@ -463,12 +474,20 @@ footer ul {
 
 }
 
+/* User Profile */
 #page-user-profile {
 
 }
 /**/
 #page-user-profile li {
-	list-style-type:none;	
+	list-style-type:none;
+	text-align: center;	
+}
+
+#static-user-profile-information {
+	width: 50%;
+	padding: 0;
+	text-align: center;
 }
 
 .page {
@@ -556,6 +575,20 @@ footer ul {
     align-items: center;
 }
 
+.intro-logo {
+	width: 60%;
+}
+
+.flex-control-center {
+	text-align: center;
+}
+
+#login-page-spacer {
+	flex: 0 0 10%;
+	/* 1st "0" flex grow; 2nd "0" flex shrink, 10% is the flex basis*/
+	/*default before the rest of the spaces distributed*/
+}
+
 /* Animal Edit Form */
 .animal-profile-edit-form {
 	width: 80%;
@@ -583,7 +616,8 @@ footer ul {
 
 /*sign in button*/
 .form-control.center-margin {
-	margin: auto;
+	/*margin: auto;*/
+	text-align: center;
 }
 
 /*Edit User button*/
@@ -615,6 +649,7 @@ footer ul {
 
 }
 
+/* Log out button for user profile page */
 .user-button button {
 	width: 40%;
     display: inline-block;
@@ -633,12 +668,13 @@ footer ul {
     text-decoration: none;
 }
 
-.page-animal-edit-button {
+#page-animal-edit-button {
 	width: 40%;
-    display: inline-block;
+    display: block;
     border-width: 0;
     background-color: var(--color-main-medium); 
-    margin: 0;
+    margin: auto;
+    /*changed from margin: 0 to margin: auto */
     padding: 0.5em 1em;
     /*border-radius: 0.3em;*/
     outline: 0;
@@ -651,12 +687,14 @@ footer ul {
     text-decoration: none;
 }
 
-.page-user-edit-button {
+#page-user-edit-button {
 	width: 40%;
-    display: inline-block;
+    display: block;
+    /* changed from display: in-line block to display: block*/
     border-width: 0;
     background-color: var(--color-main-medium); 
-    margin: 0;
+    margin: auto;
+    /*changed from margin: 0 to margin: auto */
     padding: 0.5em 1em;
     /*border-radius: 0.3em;*/
     outline: 0;
@@ -667,4 +705,33 @@ footer ul {
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+}
+
+#user-profile-logout-button {
+	margin: auto;
+	margin-bottom: 10px;
+	display: block;
+}
+
+/* User profile logout button only inside of the id--descendent selector */
+#user-profile-logout-button button {
+	width: auto;
+}
+
+#user-profile-logout-modal {
+	display: flex;
+	padding-bottom: 48px;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-color: white;
+
+}
+
+.add-animal-button {
+	 bottom: 5em !important;
+
+}
+#signin-form .form-control {
+	margin-top: 15px; 
+	margin-bottom: 15px;
 }

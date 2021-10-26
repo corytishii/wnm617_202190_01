@@ -22,7 +22,7 @@
 <!-- Sign In page -->
    <section data-role="page" id="page-signin">
       <div data-role="main" class="display-flex flex-vertical">
-         <div class="flex-stretch"></div>
+         <div class="flex-stretch" id="login-page-spacer"></div>
          <div class="flex-control-center">
          	<img class="intro-logo" src="img/logo/logo-animal tracking.svg" alt="logo">
          	
@@ -79,7 +79,7 @@
          <div class="tracker tracker-1">Coyote</div>
       <div class="tracker tracker-2">Peacock</div>
 
-         <div class="floater bottom right">
+         <div class="floater bottom right add-animal-button" >
             <a href="#" class="btn-circle" data-activate="#recent-add-modal">&plus;</a>
          </div>
 
@@ -132,7 +132,8 @@
          </div>
 
 <!-- Adding animal page -->
-         <div class="floater bottom right">
+         <div class="floater bottom right add-animal-button"> 
+         	<!-- add-animal-button--added this class to create consistent button positions -->
             <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
          </div>
       </div>
@@ -174,6 +175,8 @@
          	<ul id="static-user-profile-information">
          		<li>Name: Mary Kimball</li>
          		<li>Member: Since Febuary 2019</li>
+
+         		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum minima incidunt magni facere non dolor.</p>
          	</ul>
          	
          </div>
@@ -197,8 +200,8 @@
                   <div class="flex-none">
                   </div>
                </div>
-               <div class="modal-body">
-                  <div class="user-button">
+               <div class="modal-body" id="user-profile-logout-modal">
+                  <div class="user-button" id="user-profile-logout-button">
                     <button class="js-logout">Log Out</button>
                   </div>
                </div>
@@ -208,12 +211,12 @@
 
 
       </div>
-      <div id="test-logout">
+     <!-- <div id="test-logout">
       	 <div id="button">
-           <!-- <button class="form-button js-logout">Log Out</button> -->
+            <button class="form-button js-logout">Log Out</button> 
             <button class="profile-logout js-logout ui-btn ui-shadow ui-corner-all">Log Out</button>
          </div>
-      </div>
+      </div>-->
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
