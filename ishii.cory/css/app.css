@@ -460,6 +460,7 @@ footer ul {
 	margin-left: 4em;
 	margin-right: 6em;
 	padding: 
+
 }
 
 #page-user-profile {
@@ -612,4 +613,58 @@ footer ul {
 /* Map-Choosing animal */
 .page-location-choose-animal {
 
+}
+
+.user-button button {
+	width: 40%;
+    display: inline-block;
+    border-width: 0;
+    background-color: var(--color-main-light); 
+    margin: 0;
+    padding: 0.5em 1em;
+    /*border-radius: 0.3em;*/
+    outline: 0;
+    justify-content: center;
+    border-radius: 50px;
+    outline: 0;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.page-animal-edit-button {
+	width: 40%;
+    display: inline-block;
+    border-width: 0;
+    background-color: var(--color-main-medium); 
+    margin: 0;
+    padding: 0.5em 1em;
+    /*border-radius: 0.3em;*/
+    outline: 0;
+    justify-content: center;
+    border-radius: 50px;
+    outline: 0;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.page-user-edit-button {
+	width: 40%;
+    display: inline-block;
+    border-width: 0;
+    background-color: var(--color-main-medium); 
+    margin: 0;
+    padding: 0.5em 1em;
+    /*border-radius: 0.3em;*/
+    outline: 0;
+    justify-content: center;
+    border-radius: 50px;
+    outline: 0;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
 }

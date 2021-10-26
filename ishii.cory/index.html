@@ -163,7 +163,7 @@
       </div>
    </section>
 
-<!-- User Profile -->
+<!-- User Profile page -->
    <section data-role="page" id="page-user-profile">
       <div data-role="main" class="overscroll">
       	<div id="contain-profile" class="user-profile-top">
@@ -183,6 +183,29 @@
            	 <button class="profile-logout">Log Out</button>
          </div> -->
      	</div>
+
+     	<!-- Sliding drawer from right side -->
+     	 <div class="floater top right">
+          <a href="#" data-activate="#user-menu-modal">&colon;</a>
+        </div>
+
+        <div class="modal" id="user-menu-modal">
+          <div class="modal-back" data-deactivate="#user-menu-modal"></div>
+            <div class="modal-drawer right">
+               <div class="modal-head display-flex">
+                  <div class="flex-stretch">My Account</div>
+                  <div class="flex-none">
+                  </div>
+               </div>
+               <div class="modal-body">
+                  <div class="user-button">
+                    <button class="js-logout">Log Out</button>
+                  </div>
+               </div>
+            </div>
+        </div>
+      </div>
+
 
       </div>
       <div id="test-logout">
@@ -302,6 +325,7 @@
    </section>
 
 <!-- Pages for choosing an animal, location, & description--inside Map page -->
+
 	<!-- Choose an Animal page -->
    <section data-role="page" id="page-location-choose-animal">
       <header data-role="header">
