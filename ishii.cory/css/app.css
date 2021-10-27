@@ -1,3 +1,7 @@
+/* Using a class “card” (class)- “.”
+“Id”-“#”*/
+/* Insert comments: command—“/“ */
+
 :root {
 	--color-neutral-light: #def2f9;
 	--color-neutral-medium: #40a3c4;
@@ -13,6 +17,11 @@
 	--color-black: #111;
 
 	--header-height: 3rem;
+
+	/* --color-neutral-light: #def2f9 is the light blue */
+	/* --color-neutral-medium: #40a3c4 is the medium blue */ 
+	/* --color-neutral-dark: #0f4557 is the super dark blue */
+	/* --color-blue: #A9E8FA is the baby blue */
 }
 
 
@@ -203,10 +212,12 @@ a{
 .form-form-button,
 .form-button {
     width: 80%;
-    display: inline-block;
+    display: block;
+    /* changed display: inline-block; to display: block; (10/26/21) */
     border: none;
     background-color: var(--color-main-light); 
-    margin: 5px 2;
+    margin: auto;
+    /* margin: 5px 2; to margin: auto; (10/26/21) */
     /* 5px top & bottom, the 0 is left & right */
     padding: 0.5em 1em;
     border-radius: 50px;
@@ -297,7 +308,7 @@ footer ul {
 
 }
 /*Modal Popup*/
-.modal-popup 
+.modal-popup {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -735,3 +746,4 @@ footer ul {
 	margin-top: 15px; 
 	margin-bottom: 15px;
 }
+#animal-profile-li {}
