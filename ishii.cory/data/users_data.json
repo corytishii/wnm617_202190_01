@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Mejia Neal",
+    "username": "user1",
+    "email": "user1@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/801/fff/?text=user1",
+    "date_create": "2021-05-11 09:48:44"
+  },
+  {
+    "id": 2,
+    "name": "Bright Giles",
+    "username": "user2",
+    "email": "user2@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/821/fff/?text=user2",
+    "date_create": "2020-11-21 11:10:16"
+  },
+  {
+    "id": 3,
+    "name": "Erma Galloway",
+    "username": "user3",
+    "email": "user3@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/770/fff/?text=user3",
+    "date_create": "2020-11-10 07:00:08"
+  },
+  {
+    "id": 4,
+    "name": "Moss Salinas",
+    "username": "user4",
+    "email": "user4@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/775/fff/?text=user4",
+    "date_create": "2021-05-19 01:35:55"
+  },
+  {
+    "id": 5,
+    "name": "Heidi Fowler",
+    "username": "user5",
+    "email": "user5@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/953/fff/?text=user5",
+    "date_create": "2021-07-22 03:20:48"
+  },
+  {
+    "id": 6,
+    "name": "Anita Reynolds",
+    "username": "user6",
+    "email": "user6@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/954/fff/?text=user6",
+    "date_create": "2021-01-27 11:08:04"
+  },
+  {
+    "id": 7,
+    "name": "Lynda Chapman",
+    "username": "user7",
+    "email": "user7@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/937/fff/?text=user7",
+    "date_create": "2020-02-20 10:20:09"
+  },
+  {
+    "id": 8,
+    "name": "Helene Woods",
+    "username": "user8",
+    "email": "user8@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/770/fff/?text=user8",
+    "date_create": "2020-08-12 06:43:16"
+  },
+  {
+    "id": 9,
+    "name": "Carmela Roberts",
+    "username": "user9",
+    "email": "user9@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/838/fff/?text=user9",
+    "date_create": "2021-02-09 06:53:23"
+  },
+  {
+    "id": 10,
+    "name": "Tonia Roman",
+    "username": "user10",
+    "email": "user10@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/866/fff/?text=user10",
+    "date_create": "2020-09-12 07:55:07"
+  }
+]
