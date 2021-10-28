@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 27, 2021 at 10:50 PM
+-- Generation Time: Oct 28, 2021 at 01:43 AM
 -- Server version: 5.6.51-cll-lve
 -- PHP Version: 7.3.27
 
@@ -36,7 +36,7 @@ CREATE TABLE `track_animals` (
   `breed` varchar(64) NOT NULL,
   `description` text NOT NULL,
   `img` varchar(256) NOT NULL,
-  `data_create` datetime NOT NULL
+  `date_create` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -48,8 +48,8 @@ CREATE TABLE `track_animals` (
 CREATE TABLE `track_locations` (
   `id` int(13) NOT NULL,
   `animal_id` int(13) NOT NULL,
-  `lat` decimal(8,0) NOT NULL,
-  `lng` decimal(9,0) NOT NULL,
+  `lat` decimal(8,6) NOT NULL,
+  `lng` decimal(9,6) NOT NULL,
   `description` text NOT NULL,
   `photo` varchar(256) NOT NULL,
   `icon` varchar(256) NOT NULL,
