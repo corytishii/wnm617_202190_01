@@ -17,6 +17,12 @@
 
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+
+<!--  -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -226,8 +232,13 @@
 
    <!-- Editing User Profile page -->
    <section data-role="page" id="page-user-edit-form">
+   	<header data-role="header" class="floating-header">
+         <ul>
+            <li id= "back-button"><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
    	<div class="user-profile-bottom">
-   		<li id= "back-button"><a href="#" data-rel="back">Back</a></li>
+   		<!-- <li id= "back-button"><a href="#" data-rel="back">Back</a></li> -->
             <form action="" class="user-profile-edit-form">
 
             <div class="form-control">
@@ -268,7 +279,7 @@
 
          <!-- Inserted Map -->
          <div class="animal-profile-bottom">
-         	<div class="map"></div>
+         	<div class="map animal-profile-map" ></div>
          </div>
       </div>
       <header data-role="header" class="floating-header">
@@ -280,8 +291,13 @@
 
 <!-- Editing an animal -->
    <section data-role="page" id="page-animal-edit-form">
+   	<header data-role="header" class="floating-header">
+         <ul>
+            <li id= "back-button"><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
    	<div class="animal-profile-bottom">
-   		<li id= "back-button"><a href="#" data-rel="back">Cancel</a></li>
+   		<!-- <li id= "back-button"><a href="#" data-rel="back">Cancel</a></li> -->
             <form action="" class="form animal-edit-form">
 
             <div class="form-control">

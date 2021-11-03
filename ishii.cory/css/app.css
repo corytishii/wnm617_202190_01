@@ -22,13 +22,15 @@
 	/* --color-neutral-medium: #40a3c4 is the medium blue */ 
 	/* --color-neutral-dark: #0f4557 is the super dark blue */
 	/* --color-blue: #A9E8FA is the baby blue */
-}
 
 
-	--font-sans: Helvetica, Arial, sans-serif;
+
+	--font-sans: Arial, sans-serif;
 	--font-serif: Cambra, Georgia, serif;
 
 	--header-height: 3rem;
+}
+	
 * {
 	box-sizing: border-box;
 } 
@@ -46,6 +48,13 @@ a{
 	text-decoration: none;
 	font-weight: bold;
 }
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+}
+ h2 {
+ 	font-family: 'Lato', sans-serif;
+ }
 
 
 
@@ -208,7 +217,8 @@ a{
     /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
 }
 
-/* Form buttons for adding animals */
+/* Form buttons for adding/editing animals */
+/* Form buttons for edding user profile */
 .form-form-button,
 .form-button {
     width: 80%;
@@ -229,6 +239,7 @@ a{
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+     margin-top: 15px;
 
 }
 .ui-mobile .form-label {
@@ -257,7 +268,12 @@ footer ul {
 	background-size: 135% 135%;
 }
 
+/* Map for animal profile */
+.animal-profile-map {
+	background-size: 150% auto !important;
+	background-position: center 20%
 
+}
 
 
 
@@ -470,16 +486,19 @@ footer ul {
    list-style: none;
 }
 
-.animal-edit-form {
+.animal-edit-form,
+.user-profile-edit-form {
 	width: 80%;
 	margin: auto;
 }
 
 /* Sign in forms & buttons */
-.animal-edit-form .form-input {
+.animal-edit-form .form-input,
+.user-profile-edit-form .form-input {
     width: 100%;
     display: inline-block;
-    border: 1px solid var(--color-neutral-medium);
+    border: none;
+    border-bottom: 1px solid var(--color-neutral-medium);
     margin: 0;
     padding: 0.5em 1em;
     /*border-radius: 50px;*/
@@ -806,17 +825,17 @@ footer ul {
 }
 
 /* Animal Edit Forms p.2*/
-.animal-edit-form .form-input {
-    width: 100%;
-    display: inline-block;
-    border: 1px solid var(--color-neutral-medium);
-    margin: 0;
+/*.animal-edit-form .form-input {*/
+    /*width: 100%;*/
+    /*display: inline-block;*/
+    /*border: 1px solid var(--color-neutral-medium);*/
+   /* margin: 0;
     padding: 0.5em 1em;
     /*border-radius: 50px;*/
     /* changed border-radius: 0.3em; to border-radius: 50px;*/
     /*outline: 0;*/
-    font: inherit;
-    box-sizing: border-box;
+   /*font: inherit;*/
+    /*box-sizing: border-box;*/
     /*justify-content: center;*/
     /*text-align: center; */
     /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
@@ -855,4 +874,8 @@ footer ul {
 .form .profile-edit-form {
 	margin-top: 15px; 
 	margin-bottom: 15px;
+}
+
+.animal-profile-bottom, .user-profile-bottom {
+	margin-top: 54px;
 }
