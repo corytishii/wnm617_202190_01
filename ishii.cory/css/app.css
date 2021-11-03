@@ -23,14 +23,15 @@
 	/* --color-neutral-dark: #0f4557 is the super dark blue */
 	/* --color-blue: #A9E8FA is the baby blue */
 
-
+/* Font Family default, just in case they can't find the preferred fonts I chose */
+/* Font Family for the body text is "Arial" */
 
 	--font-sans: Arial, sans-serif;
 	--font-serif: Cambra, Georgia, serif;
 
 	--header-height: 3rem;
 }
-	
+
 * {
 	box-sizing: border-box;
 } 
@@ -49,9 +50,13 @@ a{
 	font-weight: bold;
 }
 
+/* Preferred font families that I incorporated in my pdf document to show Hamilton what font I want to use */
+/* Font for the "h1" is "Open Sans" */
 h1 {
 	font-family: 'Open Sans', sans-serif;
 }
+
+/* Fonts for the "h2" is "Lato" */
  h2 {
  	font-family: 'Lato', sans-serif;
  }
