@@ -15,6 +15,7 @@
    <script src="js/app.js"></script>
    <script src="js/functions.js"></script>
    <script src="js/pages.js"></script>
+   <script src="js/parts.js"></script>
    <script src="js/signin.js"></script>
 
 
@@ -126,21 +127,8 @@
    <section data-role="page" id="page-list">
       <div data-role="main">
          <div class="overscroll floater fill-parent">
-            <ul class="animallist">
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-            </ul>
+         	<div class="animal-list"></div>
+           
          </div>
 
 <!-- Adding animal page -->
@@ -448,9 +436,10 @@
    </ul>
    </script>
 
+
 <!-- Template Animal list arrangement -->
 <!-- image credit: https://unsplash.com/photos/vjFC9OjrOtA -->
-   <script type="text/template" id="animallist-item-template">
+ <!--    <script type="text/template" id="animallist-item-template">
    <a href="#page-animal-profile" class="display-flex">
       <div class="flex-none animallist-item-image">
          <img src="img/animals/lukas-souza-vjFC9OjrOtA-unsplash.jpg" alt=""> 
@@ -461,7 +450,7 @@
          <div class="animallist-item-breed"><strong>Breed</strong> Breed</div>
       </div>
    </a>
-   </script>
+   </script> -->
    
 </body>
 </html>
