@@ -49,7 +49,7 @@ die(
    json_encode(
       makeQuery(
          makeConn(),
-         "SELECT * FROM track_202190_locations WHERE id = ?",
+         "SELECT * FROM track_locations WHERE id = ?",
          [6]
       ),
       JSON_NUMERIC_CHECK
