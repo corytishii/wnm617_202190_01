@@ -88,11 +88,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 die(
    json_encode(
-      makeQuery(
-         makeConn(),
-         "SELECT * FROM track_locations WHERE id = ?",
-         [6]
-      ),
+      makeStatement($data),
       JSON_NUMERIC_CHECK
    )
 );

@@ -10,7 +10,7 @@ const ListPage = async() => {
 
    console.log(result,error);
 
-   $("#page-list .animallist").html(makeAnimalList(result));
+   $("#page-list .animal-list").html(makeAnimalList(result));
 }
 
 
