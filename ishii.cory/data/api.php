@@ -75,6 +75,9 @@ function makeStatement($data) {
          case "check_signin":
             return makeQuery($c,"SELECT * FROM `track_users` WHERE `username`=? AND `password`=md5(?)",$p);
 
+            // New
+          case "locations_by_animal_id_array":
+            return makeQuery($c,"SELECT * FROM `track_locations` WHERE `animal_id` IN (?)",$p);
 
          default: return ["error"=>"No Matched Type"];
       }
