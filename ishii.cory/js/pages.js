@@ -56,15 +56,13 @@ for (const element of result){
 console.log(animalidlist.join());
 
 // destructuring;only want the result & only want the array
-let {result1,error1} = await query({type:'locations_by_animal_id_array',params:[animalidlist.join()]});
+let {result:result1,error:error1} = await query({type:'locations_by_animal_id_array',params:[animalidlist.join()]});
    let mostrecent = {};
 
+
    for (const element1 of result1){
-       console.log(typeof mostrecent[element1.id].date_create);
-      if (mostrecent[element1.id] != undefined){
-         mostrecent[element1.id] = element1;
-      }
-      else if(mostrecent[element1.id].date_create) {} 
+    let currentDate = new Date(element1['date_create']);
+      console.log(element1['animal_id']);
    }
 
    console.log(result1,error1);
