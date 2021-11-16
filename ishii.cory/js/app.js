@@ -10,11 +10,11 @@ $(()=>{
    .on("pagecontainerbeforeshow",function(event, ui){
       // Page Routing
       switch(ui.toPage[0].id) {
-         // case "page-recent": RecentPage(); break;
+         case "page-recent": RecentPage(); break;
          case "page-list": ListPage(); break;
          case "page-user-profile": UserProfilePage(); break;
          case "page-animal-profile": AnimalProfilePage(); break;
-         case "page-recent": MapAnimalLocationPage(); break;
+         // case "page-recent": MapAnimalLocationPage(); break;
       }
    })
 

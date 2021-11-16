@@ -1,6 +1,15 @@
+const resultQuery = async (options) => {
+   // destructure
+   let {result,error} = await query(options);
+   if(error) {
+      throw(error);
+      return;
+   }
+   return result;
+}
+
 const ListPage = async() => {
    // destructure
-   console.log("mine")
    let {result,error} = await query({type:'animals_by_user_id',params:[sessionStorage.userId]});
 
    if(error) {
@@ -8,15 +17,34 @@ const ListPage = async() => {
       return;
    }
 
+  //  new google.maps.Map(document.getElementById("map"), {
+  //   center: { lat: -34.397, lng: 150.644 },
+  //   zoom: 8,
+  // });
+
    console.log(result,error);
 
    $("#page-list .animal-list").html(makeAnimalList(result));
 }
 
 
-// const RecentPage = async() => {
-//    console.log("honk")
-// }
+const RecentPage = async() => {
+    let result = await resultQuery({
+      type:'recent_animal_locations',
+      params:[sessionStorage.userId]
+   });
+
+   let animals = result.reduce((r,o)=>{
+      o.icon = o.img;
+      if(o.lat && o.lng) r.push(o);
+      return r;
+   },[]);
+
+   let mapEl = await makeMap("#page-recent .map");
+   makeMarkers(mapEl,animals);
+}
+
+
 
 
 const UserProfilePage = async() => {
@@ -26,7 +54,7 @@ const UserProfilePage = async() => {
       return;
    }
    let [user] = result;
-   $("#page-user-profile [data-role='main']").html(makeUserProfile(user));
+   $("#page-user-profile #contain-profile").html(makeUserProfile(user));
 }
 
 
@@ -36,34 +64,48 @@ const AnimalProfilePage = async() => {
       console.log(error);
       return;
    }
+    let mapEl = await makeMap("#page-animal-profile .map");
 
    let [animal] = result;
+   console.log(animal);
+   $(".animal-profile-middle [data-changekey='animal-profile-description-name'] span").html(animal.name);
+   $(".animal-profile-middle [data-changekey='animal-profile-description-type'] span").html(animal.type);
+   $(".animal-profile-middle [data-changekey='animal-profile-description-breed'] span").html(animal.breed);
    $(".animal-profile-top img").attr("src",animal.img);
 }
 
 // Programming Puzzle
-const MapAnimalLocationPage =  async() => {
-   let {result,error} = await query({type:'animals_by_user_id',params:[sessionStorage.userId]});
+// const MapAnimalLocationPage =  async() => {
+//    let {result,error} = await query({type:'animals_by_user_id',params:[sessionStorage.userId]});
 
-   if(error) {
-      console.log(error);
-      return;
-   }
-let animalidlist = [];
-for (const element of result){
-  animalidlist.push(element.id)
-}
-console.log(animalidlist.join());
+//    if(error) {
+//       console.log(error);
+//       return;
+//    }
+// let animalidlist = [];
+// for (const element of result){
+//   animalidlist.push(element.id)
+// }
+// console.log(animalidlist.join());
 
-// destructuring;only want the result & only want the array
-let {result:result1,error:error1} = await query({type:'locations_by_animal_id_array',params:[animalidlist.join()]});
-   let mostrecent = {};
+// // destructuring;only want the result & only want the array
+// let {result:result1,error:error1} = await query({type:'locations_by_animal_id_array',params:[animalidlist.join()]});
+//    let mostrecent = {};
 
 
-   for (const element1 of result1){
-    let currentDate = new Date(element1['date_create']);
-      console.log(element1['animal_id']);
-   }
-
-   console.log(result1,error1);
-}
+//    for (const element1 of result1){
+//       if (mostrecent[element1["animal_id"]]){
+        
+         
+//          if (mostrecent[element1['animal_id']]['id'] > mostrecent[element1['animal_id']]['id']){
+//             mostrecent[element1["animal_id"]] = element1;
+//          } 
+//       } else {
+//          mostrecent[element1["animal_id"]] = element1;
+//       }
+    
+//       // console.log(element1['animal_id']);
+//    }
+//    console.log(mostrecent);
+//    console.log(result1,error1);
+// }

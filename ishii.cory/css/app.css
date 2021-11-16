@@ -88,6 +88,7 @@ h1 {
 	height: 100%;
 	width: 100%;
 	overflow: auto;
+	padding-bottom: 48px;
 
 }
 
@@ -269,9 +270,7 @@ footer ul {
 	width: 100%;
 	height: 100%;
 	top: 0;
-	background-image: url("../img/IMG_9092.PNG");
-	background-position: center center;
-	background-size: 135% 135%;
+	/**/
 }
 
 /* Map for animal profile */
@@ -479,11 +478,16 @@ footer ul {
 .animallist-item-breed {
    font-size: 0.9em;
 }
+/* Added padding to the animal list items */
+.animal-list {
+	padding: 1em;
+}
 
 /* ANIMAL PROFILE */
 .animal-profile-top {
    flex: none;
    height: 40vh;
+   position: relative;
 }
 /* Edit animal profile page & Edit user profile page */
 .animal-profile-bottom, #page-user-edit-form {
@@ -616,7 +620,7 @@ footer ul {
 /* profile container */
 #contain-profile{
 	position: absolute;
-	top: 25%;
+	top: 10%;
 }
 
 /*log out button*/
@@ -647,8 +651,8 @@ footer ul {
 
 /* user profile image */
 .user-profile-top img {
-	height: 30%;
-	width: 30%;
+	height: 50%;
+	width: 50%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -697,9 +701,9 @@ footer ul {
 }
 
 /* Edit Animal button */
-.page-animal-edit-button {
+/*.page-animal-edit-button {
 
-}
+}*/
 
 /*sign in button*/
 .form-control.center-margin {
@@ -756,10 +760,10 @@ footer ul {
 }
 
 #page-animal-edit-button {
-	width: 40%;
+	/*width: 40%;*/
     display: block;
     border-width: 0;
-    background-color: var(--color-main-medium); 
+    background-color: var(--color-main-light); 
     margin: auto;
     /*changed from margin: 0 to margin: auto */
     padding: 0.5em 1em;
@@ -768,10 +772,29 @@ footer ul {
     justify-content: center;
     border-radius: 50px;
     outline: 0;
-    font: inherit;
+    font-family: inherit;
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+/* Editing the data for the animal profiles */
+/*.animal-profile-middle [data-changekey='animal-profile-description-name'] {
+
+}
+
+.animal-profile-middle [data-changekey='animal-profile-description-type'] {
+
+}
+
+.animal-profile-middle [data-changekey='animal-profile-description-breed'] {
+
+}*/
+.animal-profile-middle [data-changekey='animal-profile-description-*'] {
+	padding: 1em; 
 }
 
 #page-user-edit-button {
