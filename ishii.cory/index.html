@@ -273,10 +273,38 @@
                <li data-changekey="animal-profile-description-name" >Name: <span></span></li> 
                <li data-changekey="animal-profile-description-type">Type: <span></span></li> 
                <li data-changekey="animal-profile-description-breed">Breed: <span></span></li> 
-               
+               <a href="#page-animal-delete-form" id="page-animal-delete-button" data-role="none">Delete</a> 
             </ul>
           		<a href="#page-animal-delete-form" id="page-animal-delete-button" data-role="none">Delete</a>
          </div>
+
+      <!-- Delete Animal Page -->
+
+       <section data-role="page" id="page-animal-delete">
+      <header data-role="header">
+         <h1>Delete Animal!</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Cancel</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form class="fill-parent display-flex flex-vertical" id="animal-delete-form" data-ajax="false">
+            <div class="flex-stretch position-relative">
+               <div class="fill-parent overscroll position-absolute padding-md">
+                  <div class="form-control">
+                     <label for="animal-delete-name" class="form-label">Confirm Delete</label>
+                     <input type="text" id="animal-delete-name" class="form-input" data-role="none" placeholder="Confirm Delete">
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="flex-none padding-md">
+               <!-- <button type="submit" class="form-button">Save</button> -->
+               <button><a href="#page-list" class="form-button" data-role="none">Confirm</a></button>
+            </div>
+         </form>
+      </div>
+   </section>
 
          <!-- Inserted Map -->
          <div class="animal-profile-bottom">
