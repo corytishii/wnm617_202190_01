@@ -759,7 +759,7 @@ footer ul {
     text-decoration: none;
 }
 
-#page-animal-edit-button {
+#page-animal-edit-button, #page-animal-delete-button {
 	/*width: 40%;*/
     display: block;
     border-width: 0;
