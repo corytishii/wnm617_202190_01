@@ -24,3 +24,16 @@ const makeUserProfile = (o) => `
    <div><a href="#page-user-settings">Settings</a></div>
 </div>
 `;
+
+const makeAnimalPopup = o => `
+<div class="display-flex animal-jump" data-id="${o.animal_id}">
+   <div class="flex-none animal-popup-image">
+      <img src="${o.img}" alt="">
+   </div>
+   <div class="flex-stretch animal-popup-body padding-md">
+      <div class="animal-popup-name">${o.name}</div>
+      <div class="animal-popup-type"><strong>Type</strong> ${o.type}</div>
+      <div class="animal-popup-breed"><strong>Breed</strong> ${o.breed}</div>
+   </div>
+</div>
+`;

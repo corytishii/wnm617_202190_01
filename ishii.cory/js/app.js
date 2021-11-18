@@ -14,6 +14,9 @@ $(()=>{
          case "page-list": ListPage(); break;
          case "page-user-profile": UserProfilePage(); break;
          case "page-animal-profile": AnimalProfilePage(); break;
+         case "page-animal-add": AnimalAddPage(); break;
+         case "page-animal-edit-form": AnimalEditPage(); break;
+
          // case "page-recent": MapAnimalLocationPage(); break;
       }
    })

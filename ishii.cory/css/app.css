@@ -936,3 +936,12 @@ footer ul {
 .animal-profile-bottom, .user-profile-bottom {
 	margin-top: 54px;
 }
+
+/* Animal Popup fo map page */
+.animal-popup-image,
+.animal-popup-body {
+   pointer-events: none;
+}
+.animal-popup-image img {
+   max-width: 50px;
+}

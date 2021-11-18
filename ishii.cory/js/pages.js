@@ -42,8 +42,28 @@ const RecentPage = async() => {
 
    let mapEl = await makeMap("#page-recent .map");
    makeMarkers(mapEl,animals);
-}
+// }
+let {infoWindow,map,markers} = mapEl.data();
+console.log( mapEl.data() );
+   markers.forEach((o,i)=>{
+      o.addListener("click",function(){
 
+         /* Simple Example */
+         // sessionStorage.animalId = animals[i].animal_id;
+         // $.mobile.navigate("#page-animal-profile")
+
+         /* InfoWindow Example */
+         infoWindow.open(map,o);
+         infoWindow.setContent(makeAnimalPopup(animals[i]))
+
+         /* Activate Example */
+         // $("#recent-drawer")
+         //    .addClass("active")
+         //    .find(".modal-body")
+         //    .html(makeAnimalPopup(animals[i]))
+      })
+   });
+}
 
 
 
@@ -72,6 +92,49 @@ const AnimalProfilePage = async() => {
    $(".animal-profile-middle [data-changekey='animal-profile-description-type'] span").html(animal.type);
    $(".animal-profile-middle [data-changekey='animal-profile-description-breed'] span").html(animal.breed);
    $(".animal-profile-top img").attr("src",animal.img);
+
+   let locations_result = await resultQuery({
+      type:'locations_by_animal_id',
+      params:[sessionStorage.animalId]
+   });
+   
+   makeMarkers(mapEl,locations_result);
+}
+
+const UserEditPage = async() => {
+   let user_result = await resultQuery({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   });
+
+   let [user] = user_result;
+   
+   $("#user-edit-form .fill-parent").html(
+      makeUserFormInputs(user,"user-edit")
+   );
+}
+
+const AnimalAddPage = async() => {
+   $("#animal-add-form .fill-parent").html(
+      makeAnimalFormInputs({
+         name:'',
+         type:'',
+         breed:'',
+         description:''
+      },"animal-add")
+   );
+}
+
+const AnimalEditPage = async() => {
+   let animal_result = await resultQuery({
+      type: 'animal_by_id',
+      params:[sessionStorage.animalId]
+   });
+   let [animal] = animal_result;
+
+   $("#edit-animal-name").val(animal.name);
+   $("#edit-animal-type").val(animal.type);
+   $("#edit-animal-breed").val(animal.breed); 
 }
 
 // Programming Puzzle
