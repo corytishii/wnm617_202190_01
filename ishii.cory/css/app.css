@@ -551,7 +551,7 @@ footer ul {
 
 .floating-header {
    position: absolute;
-   background-color: rgba(255,255,255,0.15);
+   background-color: #F0A3C1;
    width: 100%;
    top: 0;
    left: 0;
@@ -645,6 +645,17 @@ footer ul {
 	border-color: var(--color-main-light);
 
 }
+
+/* Back icon button */
+#back-button a {
+	height: 34px;
+	width: 34px;
+	background-image: url(../img/icons/Back.svg);
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 #animal-profile-li {
 	list-style-type:none;	
 }
@@ -781,6 +792,22 @@ footer ul {
     bottom: 10px;
 }
 
+/* Animal Profile Delete Button */
+#page-animal-delete-button {
+	/*position: static; */
+	left: unset;
+	right: 10px;
+	height: 34px;
+	width: 34px;
+	background-image: url(../img/icons/Delete.svg);
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	/*top:;*/
+	/*bottom:;*/
+}
+
 /* Editing the data for the animal profiles */
 /*.animal-profile-middle [data-changekey='animal-profile-description-name'] {
 
@@ -793,9 +820,10 @@ footer ul {
 .animal-profile-middle [data-changekey='animal-profile-description-breed'] {
 
 }*/
-.animal-profile-middle [data-changekey='animal-profile-description-*'] {
-	padding: 1em; 
+.animal-profile-middle li[data-changekey^='animal-profile-description'] {
+	padding: .5em; 
 }
+/* ^= anything that starts with ^ */
 
 #page-user-edit-button {
 	width: 40%;
