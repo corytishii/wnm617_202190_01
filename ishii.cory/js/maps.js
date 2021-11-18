@@ -1,5 +1,7 @@
   
 const makeMap = (target="", center={ lat:37.786437, lng:-122.399650 }) => {
+	await checkData(()=>window.google);
+	// did this, but I cannot see my map if I uncomment this ^
    let mapEl = $(target);
 
    if(!mapEl.data("map")) {
