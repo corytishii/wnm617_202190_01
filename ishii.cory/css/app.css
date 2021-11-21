@@ -830,7 +830,7 @@ footer ul {
     display: block;
     /* changed from display: in-line block to display: block*/
     border-width: 0;
-    background-color: var(--color-main-medium); 
+    background-color: var(--color-main-light); 
     margin: auto;
     /*changed from margin: 0 to margin: auto */
     padding: 0.5em 1em;

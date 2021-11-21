@@ -262,7 +262,7 @@
             </div>
         </form>
    </section>
-
+<!-- Help with this -->
  <section data-role="page" id="page-user-settings">
       <header data-role="header">
          <h1>User Edit</h1>
@@ -282,6 +282,7 @@
                <a href="#" class="js-logout">Logout</a>
             </li>
          </ul>
+
       </div>
    </section>
 
@@ -448,6 +449,16 @@
       <div data-role="main">
          Choose an Animal!
 
+          <form action="" class="form animal-edit-form">
+
+            <div class="form-control">
+               <label for="map-add-animal-name" class="form-label">Animal Name</label>
+               <input class="form-input" type="text" id="map-add-animal-name" data-role="none" placeholder="Name">
+            </div>
+      
+            </form>
+
+
          <!-- Inserted a button -->
 
       	<div class="flex-none padding-md">
@@ -468,7 +479,16 @@
          </ul>
       </header>
       <div data-role="main">
-         Choose a location
+         Set a location
+
+         <form action="" class="form animal-edit-form">
+
+            <div class="form-control">
+               <label for="map-set-animal-location" class="form-label">Set location</label>
+               <input class="form-input" type="text" id="map-set-animal-location" data-role="none" placeholder="Location">
+            </div>
+            
+            </form>
 
 		<!-- Inserted a button -->
 
@@ -490,13 +510,28 @@
          </ul>
       </header>
       <div data-role="main">
+         
          Animal Description
+
+         <form action="" class="form animal-edit-form">
+            
+            <div class="form-control">
+               <label for="map-animal-description" class="form-label">Description</label>
+               <input class="form-input" type="text" id="map-add-animal-description" data-role="none" placeholder="Description">
+            </div>
+           <!--  <div class="form-control">
+               <input type="submit" value="Submit" class="form-button" data-role="none">
+            </div> -->
+
+
+          
+            </form>
 
          <!-- Inserted a button -->
 
-         <div class="flex-none padding-md">
+        <!--  <div class="flex-none padding-md">
       		<a href="#page-list" class="form-button">Save!</a>
-      	</div>
+      	</div> -->
 
       </div>
    </section>
