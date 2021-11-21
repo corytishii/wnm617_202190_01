@@ -101,6 +101,7 @@ const AnimalProfilePage = async() => {
    makeMarkers(mapEl,locations_result);
 }
 
+
 const UserEditPage = async() => {
    let user_result = await resultQuery({
       type:'user_by_id',
@@ -109,10 +110,16 @@ const UserEditPage = async() => {
 
    let [user] = user_result;
    
-   $("#user-edit-form .fill-parent").html(
-      makeUserFormInputs(user,"user-edit")
-   );
+   // $("#user-edit-form .fill-parent").html(
+   //    makeUserFormInputs(user,"user-edit")
+   // );
+
+   // play around with this (bottom)
+    $("#edit-user-name").val(user.name);
+   $("#edit-user-type").val(user.type);
+   // $("#edit-user-breed").val(user.breed); 
 }
+
 
 const AnimalAddPage = async() => {
    $("#animal-add-form .fill-parent").html(

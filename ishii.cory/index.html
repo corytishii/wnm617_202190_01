@@ -162,6 +162,10 @@
                   <label for="list-add-breed" class="form-label">Breed</label>
                   <input type="text" id="list-add-breed" class="form-input" data-role="none" placeholder="Breed">
                </div>
+                <div class="form-control">
+                  <label for="list-add-description" class="form-label">description</label>
+                  <input type="text" id="list-add-description" class="form-input" data-role="none" placeholder="description">
+               </div>
             </div>
             <div class="modal-foot">
                <button type="submit" class="form-button">Save</button>
@@ -208,6 +212,8 @@
                   <div class="flex-none">
                   </div>
                </div>
+                  <a href="#page-user-edit-form" id="page-user-edit-button" data-role="none">Edit</a>
+
                <div class="modal-body" id="user-profile-logout-modal">
                   <div class="user-button" id="user-profile-logout-button">
                     <button class="js-logout">Log Out</button>
@@ -232,7 +238,7 @@
    <section data-role="page" id="page-user-edit-form">
    	<header data-role="header" class="floating-header">
          <ul>
-            <li id= "back-button"><a href="#" data-rel="back">Back</a></li>
+            <li id= "back-button"><a href="#" data-rel="back"></a></li>
          </ul>
       </header>
    	<div class="user-profile-bottom">
@@ -255,7 +261,49 @@
                <input type="submit" value="Submit" class="form-button" data-role="none">
             </div>
         </form>
+   </section>
 
+ <section data-role="page" id="page-user-settings">
+      <header data-role="header">
+         <h1>User Edit</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="overscroll">
+         <ul class="nav-page-links">
+            <li>
+               <a href="#page-user-edit">Update User Info</a>
+            </li>
+            <li>
+               <a href="#page-user-edit">Change Password</a>
+            </li>
+            <li>
+               <a href="#" class="js-logout">Logout</a>
+            </li>
+         </ul>
+      </div>
+   </section>
+
+   <section data-role="page" id="page-user-edit">
+      <header data-role="header">
+         <h1>User Edit</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-rel="back">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         
+         <form class="fill-parent display-flex flex-vertical" id="user-edit-form" data-ajax="false">
+            <div class="flex-stretch position-relative">
+               <div class="fill-parent overscroll position-absolute padding-md">
+                  
+               </div>
+            </div>
+         </form>
+      </div>
    </section>
 
 
@@ -291,7 +339,7 @@
    </section>
 
 <!-- Delete Animal Page -->
-<!-- Try making the delete animal page into a modal -->
+<!-- Try making the delete animal page into a modal  -->
        <section data-role="page" id="page-animal-delete"> 
       <header data-role="header">
          <h1>Delete Animal!</h1>
