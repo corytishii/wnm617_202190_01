@@ -21,7 +21,6 @@ const makeUserProfile = (o) => `
 <div>
    <h2>${o.name}</h2>
    <h3>&commat;${o.username}</h3>
-   <div><a href="#page-user-settings">Settings</a></div>
 </div>
 `;
 

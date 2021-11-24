@@ -483,6 +483,16 @@ footer ul {
 	padding: 1em;
 }
 
+/* nav page links for slidding drawer on user profile */
+#page-user-profile .nav-page-links li {
+	text-align: left;
+}
+
+/* nav page links for slidding drawer on user profile */ 
+.nav-page-links {
+	padding: 0;
+}
+
 /* ANIMAL PROFILE */
 .animal-profile-top {
    flex: none;
@@ -559,7 +569,7 @@ footer ul {
 }
 
 .js-logout {
-	margin-left: 4em;
+	/*margin-left: 4em;*/
 	margin-right: 6em;
 	padding: 
 

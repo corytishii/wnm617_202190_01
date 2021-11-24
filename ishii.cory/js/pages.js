@@ -109,14 +109,14 @@ const UserEditPage = async() => {
    });
 
    let [user] = user_result;
-   
+   console.log("mine");
    // $("#user-edit-form .fill-parent").html(
    //    makeUserFormInputs(user,"user-edit")
    // );
 
    // play around with this (bottom)
-    $("#edit-user-name").val(user.name);
-   $("#edit-user-type").val(user.type);
+    $("#edit-user-profile-address").val(user.name);
+   $("#edit-user-profile-email").val(user.email);
    // $("#edit-user-breed").val(user.breed); 
 }
 
