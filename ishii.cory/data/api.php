@@ -135,9 +135,9 @@ function makeStatement($data) {
 /* UPDATE */
           case "update_user":
             $r = makeQuery($c,"UPDATE
-               `track_202190_users`
+               `track_users`
                SET
-                  `username` = ?,
+                  -- `username` = ?, (Uncomment this out after I put the username in this)
                   `name` = ?,
                   `email` = ?
                WHERE `id` = ?
@@ -146,7 +146,7 @@ function makeStatement($data) {
 
          case "update_user_password":
             $r = makeQuery($c,"UPDATE
-               `track_202190_users`
+               `track_users`
                SET
                   `password` = md5(?)
                WHERE `id` = ?
@@ -167,7 +167,7 @@ function makeStatement($data) {
 
             case "update_location":
             $r = makeQuery($c,"UPDATE
-               `track_202190_locations`
+               `track_locations`
                SET
                   `description` = ?
                WHERE `id` = ?

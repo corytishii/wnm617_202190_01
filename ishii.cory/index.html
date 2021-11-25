@@ -182,7 +182,7 @@
       <div data-role="main" class="overscroll">
       	<div id="contain-profile" class="user-profile-top">
          <div class="user-profile-top">
-         	<img src="img/users/zoe-fernandez--zqoE7jnQgw-unsplash.jpg">
+         	<img src="">
          </div class="user-profile-information">
          <div id="profile-list">
          	<ul id="static-user-profile-information">
@@ -255,16 +255,16 @@
             <form action="" class="user-profile-edit-form">
 
             <div class="form-control">
-               <label for="edit-animal-name" class="form-label">Name</label>
-               <input class="form-input" type="text" id="edit-user-profile-address" data-role="none" placeholder="Name">
+               <label for="edit-user-profile-name" class="form-label">Name</label>
+               <input class="form-input" type="text" id="edit-user-profile-name" data-role="none" placeholder="Name">
             </div>
             <div class="form-control">
-               <label for="edit-animal-type" class="form-label">Change Email</label>
+               <label for="edit-user-profile-email" class="form-label">Change Email</label>
                <input class="form-input" type="text" id="edit-user-profile-email" data-role="none" placeholder="Email">
             </div>
             
             <div class="form-control">
-               <input type="submit" value="Submit" class="form-button" data-role="none">
+               <input type="submit" value="Submit" id="submit-user-profile-edit-form" class="form-button" data-role="none">
             </div>
         </form>
    </section>
@@ -326,7 +326,7 @@
   <section data-role="page" id="page-animal-profile">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="animal-profile-top">
-            <img src="img/animals/lukas-souza-vjFC9OjrOtA-unsplash.jpg" alt=""> 
+            <img src="" alt=""> 
             <!-- image credit: https://unsplash.com/photos/vjFC9OjrOtA -->
               <a href="#page-animal-edit-form" id="page-animal-edit-button" data-role="none">Edit</a>
               <a href="#page-animal-delete" id="page-animal-delete-button" data-role="none"></a>   
@@ -337,12 +337,19 @@
                <li data-changekey="animal-profile-description-name" > <span></span></li>  
                <li data-changekey="animal-profile-description-type"> <strong> Type: </strong><span></span></li> 
                <li data-changekey="animal-profile-description-breed"> <strong> Breed: </strong><span></span></li> 
+               <li data-changekey="animal-profile-description-summary"> <strong> Description: </strong><span></span></li> 
             </ul>
           		
          </div>
 
          <!-- Inserted Map -->
          <div class="animal-profile-bottom">
+            <div class="section active">
+               <div class="map"></div>
+               <div class="floater bottom right">
+                  <a href="#page-location-set-location" class="btn-circle js-chooseanimal" data-setnavigateback="-2">&plus;</a>
+               </div>
+            </div>
          	<div class="map animal-profile-map" ></div>
          </div>
       </div>
@@ -405,8 +412,15 @@
                <input class="form-input" type="text" id="edit-animal-breed" data-role="none" placeholder="Breed">
             </div>
             <div class="form-control">
+               <label for="edit-animal-description" class="form-label">Animal Description</label>
+               <textarea class="form-input" id="edit-animal-description" data-role="none" placeholder="Description"></textarea>
+            </div>
+
+
+            <div class="form-control">
                <input type="submit" value="Submit" class="form-button" data-role="none">
             </div>
+
 
 
           
@@ -460,8 +474,16 @@
             <li><a href="#page-location-set-location">Next</a></li>
          </ul>
       </header>
-      <div data-role="main">
-         Choose an Animal!
+      <div data-role="main" style="padding:1em">
+         <input type="hidden" id="location-animal-choice">
+         <div>
+            <a href="#page-animal-add">Make a new animal</a>
+         </div>
+         <p>Or</p>
+         <div class="form-select location-animal-choice-select"></div>
+      </div>
+   </section>
+         <!-- Choose an Animal!
 
           <form action="" class="form animal-edit-form">
 
@@ -470,22 +492,22 @@
                <input class="form-input" type="text" id="map-add-animal-name" data-role="none" placeholder="Name">
             </div>
       
-            </form>
+            </form> -->
 
 
          <!-- Inserted a button -->
 
-      	<div class="flex-none padding-md">
+      	<!-- <div class="flex-none padding-md">
       		<a href="#page-location-set-location" class="form-button">Next!</a>
       	</div>
       </div>
 
-   </section>
+   </section> -->
 
    <!-- Choose a location page -->
    <section data-role="page" id="page-location-set-location">
       <header data-role="header">
-         <h1>Choose a location</h1>
+         <h1>Set a location</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
@@ -493,9 +515,10 @@
          </ul>
       </header>
       <div data-role="main">
+
          Set a location
 
-         <form action="" class="form animal-edit-form">
+         <!-- <form action="" class="form animal-edit-form"> -->
 
             <div class="form-control">
                <label for="map-set-animal-location" class="form-label">Set location</label>
@@ -520,7 +543,7 @@
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#page-list">Save</a></li>
+            <li><a href="#" class="js-submitlocationform">Save</a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -530,7 +553,7 @@
             
             <div class="form-control">
                <label for="map-animal-description" class="form-label">Description</label>
-               <input class="form-input" type="text" id="map-animal-description" data-role="none" placeholder="Description">
+               <textarea id="location-description" class="form-input" data-role="none" placeholder="Describe the animal"></textarea>
             </div>
            <!--  <div class="form-control">
                <input type="submit" value="Submit" class="form-button" data-role="none">

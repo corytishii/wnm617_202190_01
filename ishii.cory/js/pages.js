@@ -91,6 +91,7 @@ const AnimalProfilePage = async() => {
    $(".animal-profile-middle [data-changekey='animal-profile-description-name'] span").html(animal.name);
    $(".animal-profile-middle [data-changekey='animal-profile-description-type'] span").html(animal.type);
    $(".animal-profile-middle [data-changekey='animal-profile-description-breed'] span").html(animal.breed);
+   $(".animal-profile-middle [data-changekey='animal-profile-description-summary'] span").html(animal.description);
    $(".animal-profile-top img").attr("src",animal.img);
 
    let locations_result = await resultQuery({
@@ -115,7 +116,7 @@ const UserEditPage = async() => {
    // );
 
    // play around with this (bottom)
-    $("#edit-user-profile-address").val(user.name);
+    $("#edit-user-profile-name").val(user.name);
    $("#edit-user-profile-email").val(user.email);
    // $("#edit-user-breed").val(user.breed); 
 }

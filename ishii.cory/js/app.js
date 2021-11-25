@@ -36,9 +36,25 @@ $(()=>{
       e.preventDefault();
       animalAddForm();
    })
-   .on("submit", "#animal-edit-form", function(e) {
+   .on("submit", ".animal-edit-form", function(e) {
       e.preventDefault();
+      console.log(e);
       animalEditForm();
+   })
+
+// FORM ANCHOR CLICKS
+
+   .on("click","#submit-user-profile-edit-form",function(e) {
+      e.preventDefault();
+      userEditForm();
+   })
+   .on("click",".js-submituserpassword",function(e) {
+      e.preventDefault();
+      userEditPasswordForm();
+   })
+   .on("click",".js-submitlocationform",function(e){
+      e.preventDefault();
+      locationAddForm();
    })
 
 
