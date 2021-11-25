@@ -32,6 +32,15 @@ $(()=>{
       e.preventDefault();
    })
 
+   .on("submit", "#animal-add-form", function(e) {
+      e.preventDefault();
+      animalAddForm();
+   })
+   .on("submit", "#animal-edit-form", function(e) {
+      e.preventDefault();
+      animalEditForm();
+   })
+
 
    // ANCHOR CLICKS
    .on("click",".js-logout",function(e) {
@@ -43,6 +52,22 @@ $(()=>{
       if(!$(this).data("id")) throw("No ID on element");
       sessionStorage.animalId = $(this).data("id");
       $.mobile.navigate("#page-animal-profile");
+   })
+
+   .on("click","[data-setnavigateback]",function(e){
+      $("#location-navigateback").val($(this).data("setnavigateback"))
+   })
+   .on("click",".js-navigate-back",function(e){
+      window.history.go(+$("#location-navigateback").val());
+   })
+
+
+   .on("click",".animal-profile-middle li",function(e){
+      let id = $(this).index();
+      $(this).addClass("active")
+         .siblings().removeClass("active");
+      $(this).closest(".animal-profile-middle").next().children().eq(id).addClass("active")
+         .siblings().removeClass("active");
    })
 
 

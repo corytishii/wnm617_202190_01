@@ -26,6 +26,21 @@
 /* Font Family default, just in case they can't find the preferred fonts I chose */
 /* Font Family for the body text is "Arial" */
 
+/* Neutral Colors */
+/* #000000 is black */
+/* #707070 is grey */
+/* #FFFFFF is white */
+
+/* Main Colors (Blues) */
+/* #2D3192 is the dark blue */
+/* #00AEEF is the medium blue */
+/* #CCEFFC is the light blue */
+
+/* Accent Colors (Pinks) */
+/* #E14683 is the dark pink */
+/* #F0A3C1 is the light pink */
+
+
 	--font-sans: Arial, sans-serif;
 	--font-serif: Cambra, Georgia, serif;
 
