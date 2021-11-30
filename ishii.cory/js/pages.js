@@ -142,6 +142,7 @@ const AnimalEditPage = async() => {
 
    $("#edit-animal-name").val(animal.name);
    $("#edit-animal-type").val(animal.type);
+   $("#edit-animal-breed").val(animal.breed);
    $("#edit-animal-breed").val(animal.breed); 
 }
 
@@ -165,7 +166,7 @@ const LocationChooseAnimalPage = async() => {
 
    console.log(result,makeAnimalChoiceSelect(result),$("#location-animal-choice"))
 // change the id (#locations-animal-choice to yours)
-   $("#location-animal-choice").html(
+   $(".location-animal-choice-select").html(
       makeAnimalChoiceSelect(result)
    );
 }

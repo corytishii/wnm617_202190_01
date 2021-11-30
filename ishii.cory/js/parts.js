@@ -18,9 +18,20 @@ const makeUserProfile = (o) => `
 <div class="user-profile-image">
    <img src="${o.img}" alt="">
 </div>
+<div class="" id="profile-list">
+<ul id="static-user-profile-information">
+   <li><h2>${o.name}</h2></li>
+   <li><h3>&commat;${o.username}</h3></li>
+ </ul>  
+</div>
+`;
+
+const makeAnimalProfile = (o) => `
 <div>
    <h2>${o.name}</h2>
-   <h3>&commat;${o.username}</h3>
+   <div><strong>type</strong> ${o.type}</div>
+   <div><strong>breed</strong> ${o.breed}</div>
+   <div><strong>description</strong> <p>${o.description}</p></div>
 </div>
 `;
 
@@ -45,3 +56,4 @@ const makeAnimalChoiceSelect = (animals) => `
    }
    </select>
 `;
+// there's a ")" between the ` & the ;, I deleted it

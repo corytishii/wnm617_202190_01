@@ -1,10 +1,10 @@
 
 const animalAddForm = async () => {
-   let name = $("#animal-add-name").val();
-   let type = $("#animal-add-type").val();
-   let breed = $("#animal-add-breed").val();
-   let description = $("#animal-add-description").val();
-
+   let name = $("#list-add-name").val();
+   let type = $("#list-add-type").val();
+   let breed = $("#list-add-breed").val();
+   let description = $("#list-add-description").val();
+console.log(name,type,breed,description);
    let r = await query({
       type:'insert_animal',
       params:[sessionStorage.userId,name,type,breed,description]
@@ -12,8 +12,11 @@ const animalAddForm = async () => {
 
    if(r.error) throw(r.error);
 
+ListPage();
+
    sessionStorage.animalId = r.id;
-   history.go(-1);
+   // history.go(-1);
+   $("#list-add-modal").removeClass("active");
 }
 
 const animalEditForm = async () => {
@@ -93,5 +96,5 @@ const locationAddForm = async () => {
 
    if(r.error) throw(r.error);
 
-   history.go($("#location-navigateback").val());
+   // history.go($("#location-navigateback").val());
 }

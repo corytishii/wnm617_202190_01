@@ -33,7 +33,7 @@ $(()=>{
       e.preventDefault();
    })
 
-   .on("submit", "#animal-add-form", function(e) {
+   .on("submit", "#list-add-form", function(e) {
       e.preventDefault();
       animalAddForm();
    })
@@ -54,7 +54,7 @@ $(()=>{
       userEditPasswordForm();
    })
    .on("click",".js-submitlocationform",function(e){
-      e.preventDefault();
+      // e.preventDefault();
       locationAddForm();
    })
 
