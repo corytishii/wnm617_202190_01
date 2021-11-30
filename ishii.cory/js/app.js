@@ -17,7 +17,8 @@ $(()=>{
          case "page-animal-add": AnimalAddPage(); break;
          case "page-animal-edit-form": AnimalEditPage(); break;
          case "page-user-edit-form": UserEditPage(); break;
-
+         case "page-location-set-location": LocationSetLocationPage(); break;
+         case "page-location-choose-animal": LocationChooseAnimalPage();break;
          // case "page-recent": MapAnimalLocationPage(); break;
       }
    })

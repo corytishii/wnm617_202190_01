@@ -36,3 +36,12 @@ const makeAnimalPopup = o => `
    </div>
 </div>
 `;
+const makeAnimalChoiceSelect = (animals) => `
+   <select>
+   ${
+      templater(
+         o=>`<option value="${o.id}">${o.name}</option>`
+      )(animals)
+   }
+   </select>
+`;

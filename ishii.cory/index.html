@@ -121,12 +121,18 @@
                   </ul>
                   Add animal to map
                   <div class="floater-top-right">
-                  	<a href="#page-location-choose-animal" class="btn-circle">&plus;</a>
+                  	<a href="#page-location-choose-animal" class="btn-circle" data-setnavigateback="-3">&plus;</a>
                   </div>
                </div>
             </div>
          </div>
-      </div>
+         <div id="recent-drawer" class="modal">
+            <div class="modal-back transparent" data-deactivate="#recent-drawer"></div>
+            <div class="modal-drawer basin top">
+               <div class="modal-body"></div>
+            </div>
+         </div>
+      </div> 
        <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
@@ -455,8 +461,8 @@
                </div>
             </div>
             <div class="flex-none padding-md">
-               <!-- <button type="submit" class="form-button">Save</button> -->
-               <button><a href="#page-list" class="form-button" data-role="none">Save</a></button>
+               <button type="submit" class="form-button">Save</button>
+               <!-- <button><a href="#page-list" class="form-button" data-role="none">Save</a></button> -->
             </div>
          </form>
       </div>
@@ -515,24 +521,29 @@
          </ul>
       </header>
       <div data-role="main">
+         <input type="hidden" id="location-lat">
+         <input type="hidden" id="location-lng">
+         <div class="map"></div>
+      </div>
+   </section>
 
-         Set a location
+         <!-- Set a location -->
 
          <!-- <form action="" class="form animal-edit-form"> -->
 
-            <div class="form-control">
+           <!--  <div class="form-control">
                <label for="map-set-animal-location" class="form-label">Set location</label>
                <input class="form-input" type="text" id="map-set-animal-location" data-role="none" placeholder="Location">
             </div>
             
             </form>
-
+ -->
 		<!-- Inserted a button -->
 
-		<div class="flex-none padding-md">
+		<!-- <div class="flex-none padding-md">
       		<a href="#page-location-description" class="form-button">Next!</a>
       	</div>
-      </div>
+      </div> -->
 
    </section>
 

@@ -145,6 +145,30 @@ const AnimalEditPage = async() => {
    $("#edit-animal-breed").val(animal.breed); 
 }
 
+const LocationSetLocationPage = async() => {
+   let mapEl = await makeMap("#page-location-set-location .map");
+   // change the id (#page-locations-set-location .map to yours)
+   makeMarkers(mapEl,[]);
+
+   mapEl.data("map").addListener("click",function(e){
+      $("#location-lat").val(e.latLng.lat())
+      $("#location-lng").val(e.latLng.lng())
+      makeMarkers(mapEl,[e.latLng]);
+   })
+}
+
+const LocationChooseAnimalPage = async() => {
+   let result = await resultQuery({
+      type:'animals_by_user_id',
+      params:[sessionStorage.userId]
+   });
+
+   console.log(result,makeAnimalChoiceSelect(result),$("#location-animal-choice"))
+// change the id (#locations-animal-choice to yours)
+   $("#location-animal-choice").html(
+      makeAnimalChoiceSelect(result)
+   );
+}
 // Programming Puzzle
 // const MapAnimalLocationPage =  async() => {
 //    let {result,error} = await query({type:'animals_by_user_id',params:[sessionStorage.userId]});
