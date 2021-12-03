@@ -29,6 +29,16 @@ $(()=>{
       e.preventDefault();
       checkSigninForm();
    })
+
+   .on("submit", "#signup-form", function(e) {
+      e.preventDefault();
+      checkSignup();
+   })
+   .on("submit", "#signup-form2", function(e) {
+      e.preventDefault();
+      checkSignup2();
+   })
+
    .on("submit","#list-add-form",function(e) {
       e.preventDefault();
    })
@@ -41,6 +51,11 @@ $(()=>{
       e.preventDefault();
       console.log(e);
       animalEditForm();
+   })
+   .on("submit", "#list-search-form", function(e) {
+      e.preventDefault();
+      let s = $(this).find("input").val();
+      checkSearchForm(s);
    })
 
 // FORM ANCHOR CLICKS
@@ -57,6 +72,13 @@ $(()=>{
       // e.preventDefault();
       locationAddForm();
    })
+
+   .on("click","[data-filter]",function(e){
+      let {filter,value} = $(this).data();
+      if(value=="") ListPage();
+      else checkFilter(filter,value);
+   })
+
 
 
    // ANCHOR CLICKS
@@ -105,7 +127,15 @@ $(()=>{
       // console.log(target)
       $(target).addClass("active").siblings().removeClass('active');
    })
-   ;
+    .on("click",".js-animal-delete",function(e){
+      query({
+         type:"delete_animal",
+         params: [sessionStorage.animalId]
+      }).then(d=>{
+         history.go(-1);
+      })
+   });
+
 
 
    $("[data-template]").each(function(){
@@ -118,6 +148,7 @@ $(()=>{
       "#page-list":".nav-icon-set li:nth-child(2)",
       "#page-user-profile":".nav-icon-set li:nth-child(3)",
    }[location.hash]).addClass("active");
+
 
 
 });

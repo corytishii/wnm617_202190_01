@@ -138,7 +138,14 @@
 
 <!-- Animal List page -->
    <section data-role="page" id="page-list">
-      <div data-role="main">
+      <div data-role="main" class="display-flex flex-vertical">
+          <div class="search-bar header flex-none">
+            <form data-ajax="false" id="list-search-form" class="hotdog medium">
+               <input type="search" data-role="none" placeholder="Search for an animal">
+            </form>
+         </div>
+         <div class="filter-bar header flex-none"></div>
+         <div class="position-relative">
          <div class="overscroll floater fill-parent">
          	<div class="animal-list"></div>
            
@@ -275,6 +282,23 @@
         </form>
    </section>
 
+   <section data-role="page" id="profile-upload-user-image">
+      <header data-role="header">
+         <ul>
+            <li id= "back-button"><a href="#" data-rel="back"></a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="overscroll">
+         <form action="">
+            <label for="image-upload-user-input">
+               <input id="image-upload-user-input" type="file">
+            </label>
+         </form>
+      </div>
+   </section>
+      
+   
+
    <!-- Editing Change Password page -->
    <section data-role="page" id="page-user-change-password">
       <header data-role="header" class="floating-header">
@@ -335,7 +359,7 @@
             <img src="" alt=""> 
             <!-- image credit: https://unsplash.com/photos/vjFC9OjrOtA -->
               <a href="#page-animal-edit-form" id="page-animal-edit-button" data-role="none">Edit</a>
-              <a href="#page-animal-delete" id="page-animal-delete-button" data-role="none"></a>   
+              <a href="#" data-activate="#animal-profile-delete-modal" id="page-animal-delete-button" data-role="none"></a>   
          </div>
          <div class="animal-profile-middle">
             <ul class="nav" id="animal-profile-li">
@@ -364,35 +388,33 @@
             <li id= "back-button"><a href="#" data-rel="back"></a></li>
          </ul>
       </header>
+
+       <div class="modal" id="animal-profile-delete-modal">
+         <div class="modal-back" data-deactivate="#animal-profile-delete-modal"></div>
+         <form class="modal-popup form" data-ajax="false">
+            <div class="modal-head">Delete Animal</div>
+            <div class="modal-body">
+               <div class="form-control">
+                  <button type="submit" class="js-animal-delete">Yes</button>
+               </div>
+               <div class="form-control">
+                  
+                  <a href="#" data-deactivate="#animal-profile-delete-modal">Cancel</a>
+               </div>
+               
+                
+            </div>
+            <div class="modal-foot">
+               
+            </div>
+         </form>
+      </div>      
+
    </section>
 
 <!-- Delete Animal Page -->
 <!-- Try making the delete animal page into a modal  -->
-       <section data-role="page" id="page-animal-delete"> 
-      <header data-role="header">
-         <h1>Delete Animal!</h1>
-         <ul>
-            <li><a href="#" data-rel="back">Cancel</a></li>
-         </ul>
-      </header>
-      <div data-role="main">
-         <form class="fill-parent display-flex flex-vertical" id="animal-delete-form" data-ajax="false">
-            <div class="flex-stretch position-relative">
-               <div class="fill-parent overscroll position-absolute padding-md">
-                  <div class="form-control">
-                     <label for="animal-delete-name" class="form-label">Confirm Delete</label>
-                     <input type="text" id="animal-delete-name" class="form-input" data-role="none" placeholder="Confirm Delete">
-                  </div>
-                  
-               </div>
-            </div>
-            <div class="flex-none padding-md">
-               <!-- <button type="submit" class="form-button">Save</button> -->
-               <button><a href="#page-list" class="form-button" data-role="none">Confirm</a></button>
-            </div>
-         </form>
-      </div>
-   </section>
+       
 
 <!-- Editing an animal -->
    <section data-role="page" id="page-animal-edit-form">

@@ -133,6 +133,8 @@ h1 {
    position: relative;
    overflow: hidden;
 }
+
+
 [data-role="footer"] {
    flex: none;
    height: var(--header-height);
@@ -146,6 +148,7 @@ h1 {
    /*changed position: relative; to fixed*/
    bottom: 0;
 }
+
 [data-role="header"] {
    flex: none;
    height: var(--header-height);
@@ -159,6 +162,7 @@ h1 {
    overflow: hidden;
    position: relative;
    bottom: 0;
+z-index: 10;
 
 }
 
@@ -496,6 +500,7 @@ footer ul {
 /* Added padding to the animal list items */
 .animal-list {
 	padding: 1em;
+	padding-bottom: 6em;
 }
 
 /* nav page links for slidding drawer on user profile */
@@ -969,4 +974,57 @@ footer ul {
 }
 .animal-popup-image img {
    max-width: 50px;
+}
+
+/* hotdog menu (hamilton calls it this, but it's the search cbar) */
+.hotdog {
+   padding: 0.5em 1em;
+   display: inline-flex;
+   width: 100%;
+   border-radius: 2em;
+   position: relative;
+}
+   .hotdog.white {
+      background-color: var(--color-white);
+   }
+   .hotdog.medium {
+      background-color: var(--color-neutral-light);
+   }
+   .hotdog input {
+      border-width: 0;
+      background-color: transparent;
+      border-radius: 0;
+      -webkit-appearance: none;
+      font: inherit;
+      color: inherit;
+      outline: 0;
+      flex: 1 1 auto;
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+   }
+   .search-bar .hotdog {
+      height: 100%;
+   }
+
+.search-bar {
+   box-shadow: none;
+   z-index: 2;
+   padding: 0.2em 0.5em;
+}
+.filter-bar {
+   display: flex;
+   padding: 0 1em;
+   width: 100%;
+   overflow-x: auto;
+   gap: 1em;
+}
+.filter-bar a {
+   padding: 0;
+}
+
+label[for=image-upload-user-input] {
+	width: 80%;
+	border: 1px solid black;
+	height: 50px;
 }

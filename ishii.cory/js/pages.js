@@ -11,10 +11,14 @@ const resultQuery = async (options) => {
 const ListPage = async() => {
    // destructure
    let {result,error} = await query({type:'animals_by_user_id',params:[sessionStorage.userId]});
+   // used to be let {result,error}
 
    if(error) {
       console.log(error);
       return;
+
+   makeAnimalListSet(animals);
+
    }
 
   //  new google.maps.Map(document.getElementById("map"), {
