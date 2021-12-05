@@ -165,7 +165,18 @@ function makeStatement($data) {
             return ["id" => $c->lastInsertId()];
 
 /* UPDATE */
-          case "update_user":
+
+         case "update_user_onboard":
+            $r = makeQuery($c,"UPDATE
+               `track_users`
+               SET
+                  `name` = ?,
+                  `img` = ?
+               WHERE `id` = ?
+               ",$p,false);
+            return ["result" => "success"];
+
+         case "update_user":
             $r = makeQuery($c,"UPDATE
                `track_users`
                SET
@@ -185,6 +196,14 @@ function makeStatement($data) {
                ",$p,false);
             return ["result" => "success"];
 
+         case "update_user_image":
+            $r = makeQuery($c,"UPDATE
+               `track_users`
+               SET `img` = ?
+               WHERE `id` = ?
+               ",$p,false);
+            return ["result" => "success"];   
+
          case "update_animal":
             $r = makeQuery($c,"UPDATE
                `track_animals`
@@ -196,6 +215,15 @@ function makeStatement($data) {
                WHERE `id` = ?
                ",$p,false);
             return ["result" => "success"];
+
+         case "update_animal_image":
+            $r = makeQuery($c,"UPDATE
+               `track_animals`
+               SET `img` = ?
+               WHERE `id` = ?
+               ",$p,false);
+            return ["result" => "success"];
+
 
             case "update_location":
             $r = makeQuery($c,"UPDATE

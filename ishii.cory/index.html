@@ -213,7 +213,7 @@
          </div> -->
      	</div>
 
-     	<!-- Sliding drawer from right side -->
+     	<!-- Sliding drawer from right side-for user profile -->
      	 <div class="floater top right">
           <a href="#" data-activate="#user-menu-modal">&colon;</a>
         </div>
@@ -282,6 +282,7 @@
         </form>
    </section>
 
+   <!-- Upload/edit user profile image (by clicking on the "placeholder image") -->
    <section data-role="page" id="profile-upload-user-image">
       <header data-role="header">
          <ul>
@@ -443,6 +444,23 @@
                <label for="edit-animal-description" class="form-label">Animal Description</label>
                <textarea class="form-input" id="edit-animal-description" data-role="none" placeholder="Description"></textarea>
             </div>
+
+      <!-- Upload/edit user profile image (by clicking on the "placeholder image") -->
+      <a href="profile-upload-animal-image">Insert image</a> 
+      <section data-role="page" id="profile-upload-animal-image">
+         <header data-role="header">
+            <ul>
+               <li id= "back-button"><a href="#" data-rel="back"></a></li>
+            </ul>
+         </header>
+         <div data-role="main" class="overscroll">
+            <form action="">
+               <label for="image-upload-animal-input">
+                  <input id="image-upload-animal-input" type="file">
+               </label>
+            </form>
+         </div>
+      </section>
 
 
             <div class="form-control">

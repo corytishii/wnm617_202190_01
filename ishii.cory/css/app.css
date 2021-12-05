@@ -7,9 +7,12 @@
 	--color-neutral-medium: #40a3c4;
 	--color-neutral-dark: #0f4557;
 
-	--color-main-light: #def2f9;
-	--color-main-medium: #40a3c4 ;
-	--color-main-dark: #0f4557 ;
+	--color-main-light: #CCEFFC;
+	/* was #def2f9 */
+	--color-main-medium: #00AEEF;
+	/* was #40a3c4 */
+	--color-main-dark: #2D3192;
+	/* was #0f4557*/
 
 	--color-blue: #A9E8FA;
 
@@ -1023,8 +1026,25 @@ footer ul {
    padding: 0;
 }
 
+/* Insert photo button area */
 label[for=image-upload-user-input] {
 	width: 80%;
 	border: 1px solid black;
 	height: 50px;
+}
+
+label[for=image-upload-animal-input] {
+	width: 80%;
+	border: 1px solid black;
+	height: 50px;
+}
+
+.form-select .location-animal-choice-select {
+
+}
+
+.js-animal-delete {
+	border-width: 60%;
+	background-color: var(--color-main-light);
+	border-radius: 50px;
 }
