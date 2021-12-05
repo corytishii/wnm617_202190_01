@@ -17,6 +17,7 @@ ListPage();
    sessionStorage.animalId = r.id;
    // history.go(-1);
    $("#list-add-modal").removeClass("active");
+   $("#page-list .animal-list").toggleClass("hidden",false);
 }
 
 const animalEditForm = async () => {
@@ -40,6 +41,7 @@ const checkSignup = async () => {
    let username = $("#signup-username").val();
    let password = $("#signup-password").val();
    let confirm = $("#signup-password2").val();
+   console.log(email,username,password,confirm);
 
    if(password!=confirm)
       throw("Passwords don't match: You should handle this in some way.");

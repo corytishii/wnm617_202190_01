@@ -17,7 +17,7 @@ const ListPage = async() => {
       console.log(error);
       return;
 
-   makeAnimalListSet(animals);
+   // makeAnimalListSet(animals);
 
    }
 
@@ -27,6 +27,14 @@ const ListPage = async() => {
   // });
 
    console.log(result,error);
+  if(result.length == 0){
+   // $("#page-list .animal-list, #page-list .empty-animal-list").toggleClass("hidden");
+    $("#page-list .animal-list").toggleClass("hidden",true);
+     $("#page-list .empty-animal-list").toggleClass("hidden",false);
+
+  } else {
+   $("#page-list .empty-animal-list").toggleClass("hidden",true);
+  }
 
    $("#page-list .animal-list").html(makeAnimalList(result));
 }
@@ -78,6 +86,7 @@ const UserProfilePage = async() => {
       return;
    }
    let [user] = result;
+   console.log(user);
    $("#page-user-profile #contain-profile").html(makeUserProfile(user));
 }
 

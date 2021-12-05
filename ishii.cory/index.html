@@ -74,6 +74,10 @@
                <input class="form-input" type="text" id="signup-email" data-role="none" placeholder="Email">
             </div>
             <div class="form-control">
+               <label for="signup-username" class="form-label">Username</label>
+               <input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Username">
+            </div>
+            <div class="form-control">
                <label for="signup-password" class="form-label">New Password</label>
                <input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Password">
             </div>
@@ -90,6 +94,44 @@
          </form>
          <div class="flex-stretch"></div>
       </div>
+   </section>
+
+   <section data-role="page" id="page-signup2">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <form data-ajax="false" class="form signin-form" id="signup-form2" style="padding:10px">
+            <div class="form-control">
+               <label for="signup-name" class="form-label">Name</label>
+               <input class="form-input" type="text" id="signup-name" data-role="none" placeholder="Your Name">
+            </div>
+            <div class="form-control">
+               <input type="hidden" id="signup-image-name">
+               <label class="image-picker thumbnail">
+                  <input type="file" data-role="none">
+               </label>
+            </div>
+            <div class="form-control">
+               <input type="submit" value="Start" class="form-button" data-role="none">
+            </div>
+         </form>
+         <div class="flex-stretch"></div>
+      </div>
+
+      <section data-role="page" id="signup-upload-user-image">
+      <header data-role="header">
+         <ul>
+            <li id= "back-button"><a href="#" data-rel="back"></a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="overscroll">
+         <form action="">
+            <label for="image-upload-signup-user-input">
+               <input id="image-upload-signup-user-input" type="file">
+            </label>
+         </form>
+      </div>
+   </section>
+
    </section>
 
 <!-- Map page -->
@@ -148,7 +190,9 @@
          <div class="position-relative">
          <div class="overscroll floater fill-parent">
          	<div class="animal-list"></div>
-           
+         <div class="empty-animal-list hidden">
+            <p>You have 0 animals. Would you like to add some?</p>
+         </div>
          </div>
 
 <!-- Adding animal page -->
@@ -199,10 +243,10 @@
          </div class="user-profile-information">
          <div id="profile-list">
          	<ul id="static-user-profile-information">
-         		<li>Name: Mary Kimball</li>
+         		<!-- <li>Name: Mary Kimball</li>
          		<li>Member: Since Febuary 2019</li>
 
-         		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum minima incidunt magni facere non dolor.</p>
+         		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum minima incidunt magni facere non dolor.</p> -->
          	</ul>
          	
          </div>
@@ -445,9 +489,22 @@
                <textarea class="form-input" id="edit-animal-description" data-role="none" placeholder="Description"></textarea>
             </div>
 
-      <!-- Upload/edit user profile image (by clicking on the "placeholder image") -->
-      <a href="profile-upload-animal-image">Insert image</a> 
-      <section data-role="page" id="profile-upload-animal-image">
+      <!-- Upload/edit animal profile image (by clicking on the "placeholder image") -->
+      <a href="#profile-upload-animal-image">Insert image</a> 
+      
+
+            <div class="form-control">
+               <input type="submit" value="Submit" class="form-button" data-role="none">
+            </div>
+
+
+
+          
+            </form>
+         </div>
+   </section>
+
+   <section data-role="page" id="profile-upload-animal-image">
          <header data-role="header">
             <ul>
                <li id= "back-button"><a href="#" data-rel="back"></a></li>
@@ -462,17 +519,6 @@
          </div>
       </section>
 
-
-            <div class="form-control">
-               <input type="submit" value="Submit" class="form-button" data-role="none">
-            </div>
-
-
-
-          
-            </form>
-         </div>
-   </section>
 
 <!-- Add Animal Tab -->
    <!-- section data-role="page" id="page-animal-add">

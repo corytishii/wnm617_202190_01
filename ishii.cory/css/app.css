@@ -177,6 +177,8 @@ z-index: 10;
    margin: 0;
    padding: 0;
    position: relative;
+   height: 100%;
+   align-items: center;
 }
 [data-role="footer"] li {
    flex: 1 1 auto;
@@ -268,7 +270,7 @@ z-index: 10;
     text-align: center;
     cursor: pointer;
     text-decoration: none;
-     margin-top: 15px;
+     /*margin-top: 15px;*/
 
 }
 .ui-mobile .form-label {
@@ -348,6 +350,7 @@ footer ul {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0,0,0,0.7);
+	z-index: 3;
 
 }
 /*Modal Popup*/
@@ -356,10 +359,10 @@ footer ul {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,calc(-50% + 3em));
-	border-radius: 5px;
 	width: 80vmin;
 	overflow: hidden;
 	transition: all 0.3s;
+	z-index: 4;
 
 }
 .modal-body {
@@ -371,7 +374,7 @@ footer ul {
 .modal-foot {
 	background-color: var(--color-neutral-light);
 	line-height: 2rem;
-	padding: 0 1em;
+	padding: .75em 1em;
 }
 
 /* Modal-Foot for add animal "save button" in list page*/
@@ -501,7 +504,7 @@ footer ul {
    font-size: 0.9em;
 }
 /* Added padding to the animal list items */
-.animal-list {
+.animal-list, .empty-animal-list {
 	padding: 1em;
 	padding-bottom: 6em;
 }
@@ -672,12 +675,12 @@ footer ul {
 }
 
 /*back button*/
-#back-button{
+/*#back-button{
 	background-color:var(--color-main-light);
 	border:solid;
 	border-color: var(--color-main-light);
 
-}
+}*/
 
 /* Back icon button */
 #back-button a {
@@ -1014,6 +1017,7 @@ footer ul {
    box-shadow: none;
    z-index: 2;
    padding: 0.2em 0.5em;
+   margin-top: 20px;
 }
 .filter-bar {
    display: flex;
@@ -1029,13 +1033,13 @@ footer ul {
 /* Insert photo button area */
 label[for=image-upload-user-input] {
 	width: 80%;
-	border: 1px solid black;
+	border: 1px solid #00AEEF;
 	height: 50px;
 }
 
 label[for=image-upload-animal-input] {
 	width: 80%;
-	border: 1px solid black;
+	border: 1px solid #00AEEF;
 	height: 50px;
 }
 
@@ -1047,4 +1051,8 @@ label[for=image-upload-animal-input] {
 	border-width: 60%;
 	background-color: var(--color-main-light);
 	border-radius: 50px;
+}
+
+.#animal-profile-delete-modal {
+
 }
