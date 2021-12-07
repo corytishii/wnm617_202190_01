@@ -3,9 +3,12 @@
 /* Insert comments: command—“/“ */
 
 :root {
-	--color-neutral-light: #def2f9;
+	--color-neutral-light: #F0A3C1;
+	/* was #def2f9 */
 	--color-neutral-medium: #40a3c4;
-	--color-neutral-dark: #0f4557;
+	/* */
+	--color-neutral-dark: #E14683;
+	/* was #0f4557 */
 
 	--color-main-light: #CCEFFC;
 	/* was #def2f9 */
@@ -221,7 +224,8 @@ z-index: 10;
 .signin-form .form-input {
     width: 100%;
     display: inline-block;
-    border: 1px solid var(--color-neutral-medium);
+    border: 1px solid var(--color-main-dark);
+	/* was border 1px solid var(--color-neutral-medium)*/
     margin: 0;
     padding: 0.5em 1em;
     border-radius: 50px;
@@ -256,7 +260,7 @@ z-index: 10;
     display: block;
     /* changed display: inline-block; to display: block; (10/26/21) */
     border: none;
-    background-color: var(--color-main-light); 
+    background-color: var(--color-neutral-light); 
     margin: auto;
     /* margin: 5px 2; to margin: auto; (10/26/21) */
     /* 5px top & bottom, the 0 is left & right */
@@ -367,7 +371,7 @@ footer ul {
 }
 .modal-body {
 	padding: 10px;
-	background-color: var(--color-white);
+	background-color: var(--color-blue);
 }
 
 .modal-head, 
@@ -379,7 +383,7 @@ footer ul {
 
 /* Modal-Foot for add animal "save button" in list page*/
 .modal-foot {
-	background-color: var(--color-white);
+	background-color: var(--color-blue);
 	line-height: 2rem;
 
 	
@@ -448,7 +452,7 @@ footer ul {
    font-size: 0.7rem;
 }
 .nav-icon-set li.active {
-   background-color: var(--color-main-light);
+   background-color: var(--color-main-medium);
 }
 
 /*map pins: https://codepen.io/katia-trifonova/pen/zwZgdx*/
@@ -994,7 +998,7 @@ footer ul {
       background-color: var(--color-white);
    }
    .hotdog.medium {
-      background-color: var(--color-neutral-light);
+      background-color: var(--color-main-light);
    }
    .hotdog input {
       border-width: 0;
