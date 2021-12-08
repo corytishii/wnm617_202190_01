@@ -61,6 +61,7 @@ const checkSignup = async () => {
 const checkSignup2 = async () => {
    let name = $("#signup-name").val();
    let image = $("#signup-image-name").val();
+   console.log(image);
 
    let r = await query({
       type:'update_user_onboard',

@@ -285,7 +285,7 @@ z-index: 10;
 
 /*responsible for changing the footer color*/
 footer ul { 
-	background: #F0A3C1;
+	background: var(--color-main-medium);
 }
 
 /*.ui*/
@@ -354,9 +354,13 @@ footer ul {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0,0,0,0.7);
-	z-index: 3;
 
 }
+/* anywhere inside the list add modal*/
+#list-add-modal .modal-back {
+	z-index: 3;
+}
+
 /*Modal Popup*/
 .modal-popup {
 	position: absolute;
@@ -367,10 +371,10 @@ footer ul {
 	overflow: hidden;
 	transition: all 0.3s;
 	z-index: 4;
-
+	/* add animal box infront of the black overlay */
 }
 .modal-body {
-	padding: 10px;
+	padding: 20px;
 	background-color: var(--color-blue);
 }
 
@@ -452,7 +456,7 @@ footer ul {
    font-size: 0.7rem;
 }
 .nav-icon-set li.active {
-   background-color: var(--color-main-medium);
+   background-color: var(--color-neutral-light);
 }
 
 /*map pins: https://codepen.io/katia-trifonova/pen/zwZgdx*/
@@ -690,7 +694,7 @@ footer ul {
 #back-button a {
 	height: 34px;
 	width: 34px;
-	background-image: url(../img/icons/Back.svg);
+	background-image: url(../img/icons/Back-1.svg);
 	background-size: 80% auto;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -814,7 +818,7 @@ footer ul {
 	/*width: 40%;*/
     display: block;
     border-width: 0;
-    background-color: var(--color-main-light); 
+    background-color: var(--color-main-medium); 
     margin: auto;
     /*changed from margin: 0 to margin: auto */
     padding: 0.5em 1em;
@@ -839,7 +843,7 @@ footer ul {
 	right: 10px;
 	height: 34px;
 	width: 34px;
-	background-image: url(../img/icons/Delete.svg);
+	background-image: url(../img/icons/Delete-1.svg);
 	background-size: 80% auto;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1053,10 +1057,17 @@ label[for=image-upload-animal-input] {
 
 .js-animal-delete {
 	border-width: 60%;
-	background-color: var(--color-main-light);
+	background-color: var(--color-neutral-light);
 	border-radius: 50px;
 }
 
 .#animal-profile-delete-modal {
 
 }
+
+/*.user-profile-image {
+	display: block;
+	height:50px;
+	width: 50px;
+	border: 1px solid black;
+}*/

@@ -84,14 +84,18 @@ $(()=>{
       .then(d=>{
          console.log(d);
          $(this).parent().prev().val("uploads/"+d.result);
+         console.log($(this).parent().prev());
          $(this).parent().css({
             "background-image":`url(uploads/${d.result})`
          });
       })
    })
+
    
+
    .on("click",".js-submituserupload",function(e) {
-      let image = $("#user-upload-filename").val();
+      let image = $("#profile-image-name").val();
+      console.log(image);
       query({
          type:"update_user_image",
          params: [image,sessionStorage.userId]
@@ -102,7 +106,7 @@ $(()=>{
       })
    })
    .on("click",".js-submitanimalupload",function(e) {
-      let image = $("#animal-upload-filename").val();
+      let image = $("#animal-image-name").val();
       query({
          type:"update_animal_image",
          params: [image,sessionStorage.animalId]
