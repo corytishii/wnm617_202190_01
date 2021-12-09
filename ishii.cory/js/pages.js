@@ -177,10 +177,10 @@ const LocationChooseAnimalPage = async() => {
       params:[sessionStorage.userId]
    });
 
-   console.log(result,makeAnimalChoiceSelect(result),$("#location-animal-choice"))
+   // console.log(result)
 // change the id (#locations-animal-choice to yours)
    $(".location-animal-choice-select").html(
-      makeAnimalChoiceSelect(result)
+      makeAnimalChoiceSelect(result,'location-animal-choice-select')
    );
 }
 // Programming Puzzle
