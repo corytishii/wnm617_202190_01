@@ -202,7 +202,7 @@ function makeStatement($data) {
                SET `img` = ?
                WHERE `id` = ?
                ",$p,false);
-            return ["result" => "success"];   
+               return $r;   
 
          case "update_animal":
             $r = makeQuery($c,"UPDATE
@@ -237,11 +237,12 @@ function makeStatement($data) {
 /* DELETE */
          case "delete_animal":
             $r = makeQuery($c,"DELETE FROM `track_animals` WHERE `id` = ?",$p,false);
-            return ["result" => "success"];
+            $q = makeQuery($c,"DELETE FROM `track_locations` WHERE `animal_id` = ?",$p,false);
+               return $r;
 
          case "delete_location":
             $r = makeQuery($c,"DELETE FROM `track_locations` WHERE `id` = ?",$p,false);
-            return ["result" => "success"];
+               return $r;
 
          default: return ["error"=>"No Matched Type"];
       }

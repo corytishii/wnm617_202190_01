@@ -97,6 +97,7 @@ const AnimalProfilePage = async() => {
       console.log(error);
       return;
    }
+   $("#location-animal-choice").val(sessionStorage.animalId);
     let mapEl = await makeMap("#page-animal-profile .map");
 
    let [animal] = result;
@@ -177,7 +178,8 @@ const LocationChooseAnimalPage = async() => {
       params:[sessionStorage.userId]
    });
 
-   // console.log(result)
+      $("#location-animal-choice").val(result[0].id);
+   
 // change the id (#locations-animal-choice to yours)
    $(".location-animal-choice-select").html(
       makeAnimalChoiceSelect(result,'location-animal-choice-select')

@@ -1,5 +1,5 @@
-/* Using a class “card” (class)- “.”
-“Id”-“#”*/
+ /*Using a class “card” (class)- “.”*/
+/*“Id”-“#”*/
 /* Insert comments: command—“/“ */
 
 :root {
@@ -213,6 +213,11 @@ z-index: 10;
 .form {}
 .form-control {
    /*padding: 1rem;*/
+}
+
+/*  spacing the image picker buttons */
+.top-spacing {
+	margin-top: 10px;
 }
 
 .signin-form {
@@ -455,6 +460,12 @@ footer ul {
    line-height: 1rem;
    font-size: 0.7rem;
 }
+
+/* Changing the text color within the .nav-icon-set li.active */
+li.active .nav-icon-label {
+	color: white;
+}
+
 .nav-icon-set li.active {
    background-color: var(--color-neutral-light);
 }
@@ -800,7 +811,7 @@ footer ul {
 	width: 40%;
     display: inline-block;
     border-width: 0;
-    background-color: var(--color-main-light); 
+    background-color: var(--color-neutral-light); 
     margin: 0;
     padding: 0.5em 1em;
     /*border-radius: 0.3em;*/
@@ -1051,14 +1062,30 @@ label[for=image-upload-animal-input] {
 	height: 50px;
 }
 
-.form-select .location-animal-choice-select {
+#image-upload-user-input {
 
 }
 
+#animal-upload-user-input{
+
+}
+
+.form-select .location-animal-choice-select {
+	background-color: var(--color-main-medium);
+	border:none;
+}
+/* "Confirm Delete" Button */
 .js-animal-delete {
 	border-width: 60%;
 	background-color: var(--color-neutral-light);
 	border-radius: 50px;
+	/*margin-left: 20px;*/
+	padding: 0.7em 3em;
+}
+.confirm-delete-parent {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .#animal-profile-delete-modal {
@@ -1070,4 +1097,4 @@ label[for=image-upload-animal-input] {
 	height:50px;
 	width: 50px;
 	border: 1px solid black;
-}*/
+}

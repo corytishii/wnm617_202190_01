@@ -21,7 +21,10 @@ const makeUserProfile = (o) => `
 <div class="" id="profile-list">
 <ul id="static-user-profile-information">
    <li><h2>${o.name}</h2></li>
+    <li><h3>id: ${o.id}</h3></li>
+    <li><h3>email: ${o.email}</h3></li>
    <li><h3>&commat;${o.username}</h3></li>
+   <li><h3>created: ${o.data_create}</h3></li>
  </ul>  
 </div>
 `;

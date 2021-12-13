@@ -104,7 +104,7 @@
                <label for="signup-name" class="form-label">Name</label>
                <input class="form-input" type="text" id="signup-name" data-role="none" placeholder="Your Name">
             </div>
-            <div class="form-control">
+            <div class="form-control top-spacing">
                <input type="hidden" id="signup-image-name">
                <label class="image-picker thumbnail">
                   <input type="file" data-role="none">
@@ -340,7 +340,7 @@
          </ul>
       </header>
       <div data-role="main" class="overscroll">
-         <form action="">
+          <div class="form-control top-spacing">
             <input type="hidden" id="profile-image-name">
                <label class="image-picker thumbnail">
                   <input type="file" data-role="none" id="image-upload-user-input">
@@ -445,7 +445,7 @@
          <div class="modal-back" data-deactivate="#animal-profile-delete-modal"></div>
          <form class="modal-popup form" data-ajax="false">
             <div class="modal-head">Delete Animal</div>
-            <div class="modal-body">
+            <div class="modal-body confirm-delete-parent">
                <div class="form-control">
                   <button type="submit" class="js-animal-delete">Confirm</button>
                </div>
@@ -495,9 +495,11 @@
                <label for="edit-animal-description" class="form-label">Animal Description</label>
                <textarea class="form-input" id="edit-animal-description" data-role="none" placeholder="Description"></textarea>
             </div>
-
       <!-- Upload/edit animal profile image (by clicking on the "placeholder image") -->
-      <a href="#profile-upload-animal-image">Insert image</a> 
+            <div class="form-control" style="margin-top: 10px;">
+                <a href="#profile-upload-animal-image">Insert image</a> 
+            </div>
+     
       
 
             <div class="form-control">
@@ -520,7 +522,7 @@
             </ul>
          </header>
          <div data-role="main" class="overscroll">
-            <form action="">
+             <div class="form-control top-spacing">
                <input type="hidden" id="animal-image-name">
                <label class="image-picker thumbnail">
                   <input type="file" data-role="none" id="animal-upload-user-input">
@@ -582,7 +584,7 @@
             <a href="#page-animal-add">Make a new animal</a>
          </div>
          <p>Or</p>
-         <div class="form-select location-animal-choice-select"></div>
+         <div class="form-select location-animal-choice-select" style="border: none;"></div>
       </div>
    </section>
          <!-- Choose an Animal!
