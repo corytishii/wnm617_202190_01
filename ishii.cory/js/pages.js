@@ -86,7 +86,9 @@ const UserProfilePage = async() => {
       return;
    }
    let [user] = result;
-   console.log(user);
+   if(user.img == undefined){
+      user.img = "";
+   }
    $("#page-user-profile #contain-profile").html(makeUserProfile(user));
 }
 
@@ -157,7 +159,7 @@ const AnimalEditPage = async() => {
    $("#edit-animal-name").val(animal.name);
    $("#edit-animal-type").val(animal.type);
    $("#edit-animal-breed").val(animal.breed);
-   $("#edit-animal-breed").val(animal.breed); 
+   $("#edit-animal-description").val(animal.description); 
 }
 
 const LocationSetLocationPage = async() => {

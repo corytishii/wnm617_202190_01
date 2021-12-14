@@ -55,7 +55,7 @@
                <input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
             </div>
             <div class="form-control center-margin">
-               <input type="submit" value="Sign In" class="form-button" data-role="none">
+               <input type="submit" value="Sign In" class="form-button" data-role="none" data-activateone=".nav-icon-set li:nth-child(1)">
             </div>
             <div class="form-control small centered">
                Need a new account? <a href="#page-signup">Sign Up</a>
@@ -86,7 +86,7 @@
                <input class="form-input" type="password" id="signup-password2" data-role="none" placeholder="Confirm">
             </div>
             <div class="form-control">
-               <input type="submit" value="Sign Up" class="form-button" data-role="none">
+               <input type="submit" value="Sign Up" class="form-button" data-role="none" >
             </div>
             <div class="form-control small centered">
                Already have an account? <a href="#page-signin">Sign In</a>
@@ -111,7 +111,7 @@
                </label>
             </div>
             <div class="form-control">
-               <input type="submit" value="Start" class="form-button" data-role="none">
+               <input type="submit" value="Start" class="form-button" data-role="none" data-activateone=".nav-icon-set li:nth-child(2)">
             </div>
          </form>
          <div class="flex-stretch"></div>
@@ -138,8 +138,7 @@
    <section data-role="page" id="page-recent">
       <div data-role="main">
          <div class="map"></div>
-         <!-- <div class="tracker tracker-1">Iguana</div> -->
-      <!-- <div class="tracker tracker-2">Penguin</div> -->
+         
 
          <div class="floater bottom right add-animal-button" >
             <a href="#" class="btn-circle" data-activate="#recent-add-modal">&plus;</a>
@@ -243,18 +242,12 @@
          </div class="user-profile-information">
          <div id="profile-list">
          	<ul id="static-user-profile-information">
-         		<!-- <li>Name: Mary Kimball</li>
-         		<li>Member: Since Febuary 2019</li>
-
-         		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum minima incidunt magni facere non dolor.</p> -->
+         		
          	</ul>
          	
          </div>
          <a href="#page-user-edit-form" id="page-user-edit-button" data-role="none">Edit</a>
-      	 <!-- <div id="button">
-           	<button class="form-button js-logout">Log Out</button> 
-           	 <button class="profile-logout">Log Out</button>
-         </div> -->
+      	 
      	</div>
 
      	<!-- Sliding drawer from right side-for user profile -->
@@ -291,12 +284,7 @@
 
 
       </div>
-     <!-- <div id="test-logout">
-      	 <div id="button">
-            <button class="form-button js-logout">Log Out</button> 
-            <button class="profile-logout js-logout ui-btn ui-shadow ui-corner-all">Log Out</button>
-         </div>
-      </div>-->
+     
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
@@ -382,28 +370,7 @@
    </section>
  
 
-  <!--  <section data-role="page" id="page-user-edit">
-      <header data-role="header">
-         <h1>User Edit</h1>
-         <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
-            <li class="flex-stretch"></li>
-            <li><a href="#" data-rel="back">Save</a></li>
-         </ul>
-      </header>
-      <div data-role="main">
-         
-         <form class="fill-parent display-flex flex-vertical" id="user-edit-form" data-ajax="false">
-            <div class="flex-stretch position-relative">
-               <div class="fill-parent overscroll position-absolute padding-md">
-                  
-               </div>
-            </div>
-         </form>
-      </div>
-   </section>
- -->
-
+ 
 <!-- Animal Profile/Pages -->
   <section data-role="page" id="page-animal-profile">
       <div data-role="main" class="display-flex flex-vertical">
@@ -464,8 +431,7 @@
 
    </section>
 
-<!-- Delete Animal Page -->
-<!-- Try making the delete animal page into a modal  -->
+
        
 
 <!-- Editing an animal -->
@@ -532,39 +498,6 @@
       </section>
 
 
-<!-- Add Animal Tab -->
-   <!-- section data-role="page" id="page-animal-add">
-      <header data-role="header">
-         <h1>Add Animal!</h1>
-         <ul>
-            <li><a href="#" data-rel="back">Cancel</a></li>
-         </ul>
-      </header>
-      <div data-role="main">
-         <form class="fill-parent display-flex flex-vertical" id="animal-add-form" data-ajax="false">
-            <div class="flex-stretch position-relative">
-               <div class="fill-parent overscroll position-absolute padding-md">
-                  <div class="form-control">
-                     <label for="animal-add-name" class="form-label">Name</label>
-                     <input type="text" id="animal-add-name" class="form-input" data-role="none" placeholder="Name">
-                  </div>
-                  <div class="form-control">
-                     <label for="animal-add-type" class="form-label">Type</label>
-                     <input type="text" id="animal-add-type" class="form-input" data-role="none" placeholder="Name">
-                  </div>
-                  <div class="form-control">
-                     <label for="animal-add-breed" class="form-label">Breed</label>
-                     <input type="text" id="animal-add-breed" class="form-input" data-role="none" placeholder="Name">
-                  </div>
-               </div>
-            </div>
-            <div class="flex-none padding-md"> -->
-               <!-- <button type="submit" class="form-button">Save</button> -->
-               <!-- <button><a href="#page-list" class="form-button" data-role="none">Save</a></button> -->
-           <!--  </div>
-         </form>
-      </div>
-   </section> -->
 
 <!-- Pages for choosing an animal, location, & description--inside Map page -->
 
@@ -581,32 +514,12 @@
       <div data-role="main" style="padding:1em">
          <input type="hidden" id="location-animal-choice">
          <div>
-            <a href="#page-animal-add">Make a new animal</a>
+            <a href="#page-animal-add">Select an animal from the list.</a>
          </div>
-         <p>Or</p>
-         <div class="form-select location-animal-choice-select" style="border: none;"></div>
+         <div class="location-animal-choice-select"></div>
       </div>
    </section>
-         <!-- Choose an Animal!
-
-          <form action="" class="form animal-edit-form">
-
-            <div class="form-control">
-               <label for="map-add-animal-name" class="form-label">Animal Name</label>
-               <input class="form-input" type="text" id="map-add-animal-name" data-role="none" placeholder="Name">
-            </div>
-      
-            </form> -->
-
-
-         <!-- Inserted a button -->
-
-      	<!-- <div class="flex-none padding-md">
-      		<a href="#page-location-set-location" class="form-button">Next!</a>
-      	</div>
-      </div>
-
-   </section> -->
+         
 
    <!-- Choose a location page -->
    <section data-role="page" id="page-location-set-location">
@@ -625,23 +538,7 @@
       </div>
    </section>
 
-         <!-- Set a location -->
-
-         <!-- <form action="" class="form animal-edit-form"> -->
-
-           <!--  <div class="form-control">
-               <label for="map-set-animal-location" class="form-label">Set location</label>
-               <input class="form-input" type="text" id="map-set-animal-location" data-role="none" placeholder="Location">
-            </div>
-            
-            </form>
- -->
-		<!-- Inserted a button -->
-
-		<!-- <div class="flex-none padding-md">
-      		<a href="#page-location-description" class="form-button">Next!</a>
-      	</div>
-      </div> -->
+         
 
    </section>
 
@@ -652,7 +549,7 @@
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#page-recent" class="js-submitlocationform">Save</a></li>
+            <li><a href="#page-recent" class="js-submitlocationform" data-deactivate="#recent-add-modal">Save</a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -663,19 +560,13 @@
                <label for="map-animal-description" class="form-label">Description</label>
                <textarea id="location-description" class="form-input" data-role="none" placeholder="Describe the animal"></textarea>
             </div>
-           <!--  <div class="form-control">
-               <input type="submit" value="Submit" class="form-button" data-role="none">
-            </div> -->
+          
 
 
           
             </form>
 
-         <!-- Inserted a button -->
-
-        <!--  <div class="flex-none padding-md">
-      		<a href="#page-list" class="form-button">Save!</a>
-      	</div> -->
+         
 
       </div>
    </section>
@@ -701,20 +592,7 @@
    </script>
 
 
-<!-- Template Animal list arrangement -->
-<!-- image credit: https://unsplash.com/photos/vjFC9OjrOtA -->
- <!--    <script type="text/template" id="animallist-item-template">
-   <a href="#page-animal-profile" class="display-flex">
-      <div class="flex-none animallist-item-image">
-         <img src="img/animals/lukas-souza-vjFC9OjrOtA-unsplash.jpg" alt=""> 
-      </div>
-      <div class="flex-stretch animallist-item-body padding-md">
-         <div class="animallist-item-name">Name</div>
-         <div class="animallist-item-type"><strong>Type</strong> Type</div>
-         <div class="animallist-item-breed"><strong>Breed</strong> Breed</div>
-      </div>
-   </a>
-   </script> -->
+
    
 </body>
 </html>

@@ -210,14 +210,14 @@ z-index: 10;
 
 
 /* FORM ELEMENTS */
-.form {}
-.form-control {
-   /*padding: 1rem;*/
-}
+
 
 /*  spacing the image picker buttons */
 .top-spacing {
 	margin-top: 10px;
+	padding: 20%;
+	margin: auto;
+	width: 80%;
 }
 
 .signin-form {
@@ -238,8 +238,6 @@ z-index: 10;
     outline: 0;
     font: inherit;
     box-sizing: border-box;
-    /*justify-content: center;*/
-    /*text-align: center; */
     /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
 }
 .form-input {
@@ -252,9 +250,6 @@ z-index: 10;
     outline: 0;
     background-color: transparent;
     font: inherit;
-    /*justify-content: center;*/
-    /*text-align: center; */
-    /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
 }
 
 /* Form buttons for adding/editing animals */
@@ -271,9 +266,7 @@ z-index: 10;
     /* 5px top & bottom, the 0 is left & right */
     padding: 0.5em 1em;
     border-radius: 50px;
-    outline: 0;
     justify-content: center;
-    /*border-radius: 0.3em;*/
     outline: 0;
     font: inherit;
     text-align: center;
@@ -296,7 +289,7 @@ footer ul {
 /*.ui*/
 
 /*https://www.w3schools.com/tags/tag_map.asp*/
-/*should I change "position:fixed;"" to "position:absolute;" ?*/
+
 .map {
 	position: absolute;
 	left: 0;
@@ -559,35 +552,22 @@ li.active .nav-icon-label {
 
 /* Sign in forms & buttons */
 .animal-edit-form .form-input,
-.user-profile-edit-form .form-input {
+.user-profile-edit-form .form-input,
+ .form-input {
     width: 100%;
     display: inline-block;
     border: none;
     border-bottom: 1px solid var(--color-neutral-medium);
     margin: 0;
     padding: 0.5em 1em;
-    /*border-radius: 50px;*/
-    /* changed border-radius: 0.3em; to border-radius: 50px;*/
     outline: 0;
     font: inherit;
     box-sizing: border-box;
-    /*justify-content: center;*/
-    /*text-align: center; */
     /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
 }
 .form-input {
-    width: 100%;
-    display: inline-block;
-    border-width: 0;
-    border-bottom: 1px solid var(--color-neutral-medium);
-    margin: 0;
-    padding: 0.5em 1em;
-    outline: 0;
     background-color: transparent;
-    font: inherit;
-    /*justify-content: center;*/
-    /*text-align: center; */
-    /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
+    /*played with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
 }
 
 .edit-animal-input-form {
@@ -614,16 +594,12 @@ li.active .nav-icon-label {
 }
 
 .js-logout {
-	/*margin-left: 4em;*/
 	margin-right: 6em;
 	padding: 
 
 }
 
 /* User Profile */
-#page-user-profile {
-
-}
 /**/
 #page-user-profile li {
 	list-style-type:none;
@@ -634,10 +610,6 @@ li.active .nav-icon-label {
 	width: 50%;
 	padding: 0;
 	text-align: center;
-}
-
-.page {
-
 }
 
 #button {
@@ -652,7 +624,6 @@ li.active .nav-icon-label {
     background-color: var(--color-main-light); 
     margin: 0;
     padding: 0.5em 1em;
-    /*border-radius: 0.3em; */
     outline: 0;
     justify-content: center;
     border-radius: 50px;
@@ -693,13 +664,6 @@ li.active .nav-icon-label {
 
 }
 
-/*back button*/
-/*#back-button{
-	background-color:var(--color-main-light);
-	border:solid;
-	border-color: var(--color-main-light);
-
-}*/
 
 /* Back icon button */
 #back-button a {
@@ -767,9 +731,7 @@ li.active .nav-icon-label {
 }
 
 /* Edit Animal button */
-/*.page-animal-edit-button {
 
-}*/
 
 /*sign in button*/
 .form-control.center-margin {
@@ -785,7 +747,6 @@ li.active .nav-icon-label {
     background-color: var(--color-main-light); 
     margin: 0;
     padding: 0.5em 1em;
-    /*border-radius: 0.3em;*/
     outline: 0;
     justify-content: center;
     border-radius: 50px;
@@ -796,15 +757,6 @@ li.active .nav-icon-label {
     text-decoration: none;
 }
 
-/*Map-Adding animal*/
-.floater-top-right {
-
-}
-
-/* Map-Choosing animal */
-.page-location-choose-animal {
-
-}
 
 /* Log out button for user profile page */
 .user-button button {
@@ -814,7 +766,6 @@ li.active .nav-icon-label {
     background-color: var(--color-neutral-light); 
     margin: 0;
     padding: 0.5em 1em;
-    /*border-radius: 0.3em;*/
     outline: 0;
     justify-content: center;
     border-radius: 50px;
@@ -826,14 +777,12 @@ li.active .nav-icon-label {
 }
 
 #page-animal-edit-button, #page-animal-delete-button {
-	/*width: 40%;*/
     display: block;
     border-width: 0;
     background-color: var(--color-main-medium); 
     margin: auto;
     /*changed from margin: 0 to margin: auto */
     padding: 0.5em 1em;
-    /*border-radius: 0.3em;*/
     outline: 0;
     justify-content: center;
     border-radius: 50px;
@@ -849,7 +798,6 @@ li.active .nav-icon-label {
 
 /* Animal Profile Delete Button */
 #page-animal-delete-button {
-	/*position: static; */
 	left: unset;
 	right: 10px;
 	height: 34px;
@@ -858,23 +806,8 @@ li.active .nav-icon-label {
 	background-size: 80% auto;
 	background-repeat: no-repeat;
 	background-position: center;
-
-	/*top:;*/
-	/*bottom:;*/
 }
 
-/* Editing the data for the animal profiles */
-/*.animal-profile-middle [data-changekey='animal-profile-description-name'] {
-
-}
-
-.animal-profile-middle [data-changekey='animal-profile-description-type'] {
-
-}
-
-.animal-profile-middle [data-changekey='animal-profile-description-breed'] {
-
-}*/
 .animal-profile-middle li[data-changekey^='animal-profile-description'] {
 	padding: .5em; 
 }
@@ -889,7 +822,6 @@ li.active .nav-icon-label {
     margin: auto;
     /*changed from margin: 0 to margin: auto */
     padding: 0.5em 1em;
-    /*border-radius: 0.3em;*/
     outline: 0;
     justify-content: center;
     border-radius: 50px;
@@ -928,29 +860,11 @@ li.active .nav-icon-label {
 	margin-top: 15px; 
 	margin-bottom: 15px;
 }
-#animal-profile-li {}
 
 /* Animal Edit Forms p.1*/
 .animal-edit-form {
 	width: 80%;
 	margin: auto;
-}
-
-/* Animal Edit Forms p.2*/
-/*.animal-edit-form .form-input {*/
-    /*width: 100%;*/
-    /*display: inline-block;*/
-    /*border: 1px solid var(--color-neutral-medium);*/
-   /* margin: 0;
-    padding: 0.5em 1em;
-    /*border-radius: 50px;*/
-    /* changed border-radius: 0.3em; to border-radius: 50px;*/
-    /*outline: 0;*/
-   /*font: inherit;*/
-    /*box-sizing: border-box;*/
-    /*justify-content: center;*/
-    /*text-align: center; */
-    /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
 }
 
 /* Animal Edit Forms p.3*/
@@ -972,13 +886,10 @@ li.active .nav-icon-label {
     border: 1px solid var(--color-neutral-medium);
     margin: 0;
     padding: 0.5em 1em;
-    /*border-radius: 50px;*/
     /* changed border-radius: 0.3em; to border-radius: 50px;*/
     outline: 0;
     font: inherit;
     box-sizing: border-box;
-    /*justify-content: center;*/
-    /*text-align: center; */
     /*p/ayed with aligning sign in text: https://www.w3schools.com/css/css_align.asp*/
 }
 
@@ -1062,24 +973,22 @@ label[for=image-upload-animal-input] {
 	height: 50px;
 }
 
-#image-upload-user-input {
 
-}
-
-#animal-upload-user-input{
-
-}
-
-.form-select .location-animal-choice-select {
-	background-color: var(--color-main-medium);
-	border:none;
+#location-animal-choice-select {
+	width:30%;
+	padding: 0.5em 1em;
+	margin: 0;
+	border: 1px solid;
+	background-color: var(--color-neutral-light);
+	border-radius: 10px;
+	outline: 0;
+	margin-top: 10px;
 }
 /* "Confirm Delete" Button */
 .js-animal-delete {
 	border-width: 60%;
 	background-color: var(--color-neutral-light);
 	border-radius: 50px;
-	/*margin-left: 20px;*/
 	padding: 0.7em 3em;
 }
 .confirm-delete-parent {
@@ -1088,13 +997,3 @@ label[for=image-upload-animal-input] {
 	justify-content: space-around;
 }
 
-.#animal-profile-delete-modal {
-
-}
-
-/*.user-profile-image {
-	display: block;
-	height:50px;
-	width: 50px;
-	border: 1px solid black;
-}
