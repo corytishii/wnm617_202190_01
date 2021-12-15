@@ -595,7 +595,7 @@ li.active .nav-icon-label {
 
 .js-logout {
 	margin-right: 6em;
-	padding: 
+	
 
 }
 
@@ -607,7 +607,7 @@ li.active .nav-icon-label {
 }
 
 #static-user-profile-information {
-	width: 50%;
+	width: 70%;
 	padding: 0;
 	text-align: center;
 }
@@ -666,7 +666,8 @@ li.active .nav-icon-label {
 
 
 /* Back icon button */
-#back-button a {
+.back-button a,
+.back-button-user-profile a {
 	height: 34px;
 	width: 34px;
 	background-image: url(../img/icons/Back-1.svg);
@@ -986,7 +987,7 @@ label[for=image-upload-animal-input] {
 }
 /* "Confirm Delete" Button */
 .js-animal-delete {
-	border-width: 60%;
+	border-width: 2px;
 	background-color: var(--color-neutral-light);
 	border-radius: 50px;
 	padding: 0.7em 3em;

@@ -170,6 +170,9 @@ $(()=>{
       // console.log(target)
       $(target).addClass("active").siblings().removeClass('active');
    })
+   .on("click", "#list-add-modal-button",function(e){
+      $("#list-add-name, #list-add-type,#list-add-breed,#list-add-description").val("");
+   })
     .on("click",".js-animal-delete",function(e){
       query({
          type:"delete_animal",

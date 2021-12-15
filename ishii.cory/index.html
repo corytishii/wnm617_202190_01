@@ -44,7 +44,7 @@
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch" id="login-page-spacer"></div>
          <div class="flex-control-center">
-         	<img class="intro-logo" src="img/logo/logo-animal tracking.svg" alt="logo">
+         	<img class="intro-logo" src="img/logo/logo-animal%20tracking.svg" alt="logo">
          	
          </div>
          <form data-ajax="false" class="form signin-form" id="signin-form" style="padding:10px">
@@ -120,11 +120,11 @@
       <section data-role="page" id="signup-upload-user-image">
       <header data-role="header">
          <ul>
-            <li id= "back-button"><a href="#" data-rel="back"></a></li>
+            <li class= "back-button"><a href="#" data-rel="back"></a></li>
          </ul>
       </header>
       <div data-role="main" class="overscroll">
-         <form action="">
+         <form>
             <label for="image-upload-signup-user-input">
                <input id="image-upload-signup-user-input" type="file">
             </label>
@@ -154,7 +154,7 @@
                      <img src="img/icons/icon-close.svg" alt="" class="icon" data-deactivate="#recent-add-modal">
                   </div>
                </div>
-               <div class="modal-body" data role="menu">
+               <div class="modal-body" data-role="menu">
                		 <ul>
                      <li><a href="#page-list"><i class="fa fa-folder-o"></i>&nbsp; List</a></li>
                      <li><a href="#page-user-profile"><i class="fa fa-user-o"></i>&nbsp; User Profile</a></li>
@@ -197,7 +197,7 @@
 <!-- Adding animal page -->
          <div class="floater bottom right add-animal-button"> 
          	<!-- add-animal-button--added this class to create consistent button positions -->
-            <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
+            <a href="#" class="btn-circle" data-activate="#list-add-modal" id="list-add-modal-button">&plus;</a>
          </div>
       </div>
        <footer data-role="footer" data-template="#footer-template"></footer>
@@ -229,6 +229,7 @@
             </div>
          </form>
       </div>
+   </div>
    </section>
 
 
@@ -238,16 +239,16 @@
       <div data-role="main" class="overscroll">
       	<div id="contain-profile" class="user-profile-top">
          <div class="user-profile-top">
-         	<img src="">
-         </div class="user-profile-information">
+         	<img alt="user profile image">
+         <div class="user-profile-information">
          <div id="profile-list">
          	<ul id="static-user-profile-information">
          		
          	</ul>
-         	
+         	</div>
          </div>
          <a href="#page-user-edit-form" id="page-user-edit-button" data-role="none">Edit</a>
-      	 
+      	</div> 
      	</div>
 
      	<!-- Sliding drawer from right side-for user profile -->
@@ -275,7 +276,7 @@
                   
                </ul>
                   <div class="user-button" id="user-profile-logout-button">
-                    <button class="js-logout">Log Out</button>
+                    <button class="js-logout" data-deactivate="#user-menu-modal">Log Out</button>
                   </div>
                </div>
             </div>
@@ -283,21 +284,22 @@
       </div>
 
 
-      </div>
+      
      
       <footer data-role="footer" data-template="#footer-template"></footer>
+   </div>
    </section>
 
    <!-- Update User Profile page in SLiding Drawer-->
    <section data-role="page" id="page-user-edit-form">
    	<header data-role="header" class="floating-header">
          <ul>
-            <li id= "back-button"><a href="#" data-rel="back"></a></li>
+            <li class= "back-button-user-profile"><a href="#" data-rel="back"></a></li>
          </ul>
       </header>
    	<div class="user-profile-bottom">
-   		<!-- <li id= "back-button"><a href="#" data-rel="back">Back</a></li> -->
-            <form action="" class="user-profile-edit-form">
+   
+            <form class="user-profile-edit-form">
 
             <div class="form-control">
                <label for="edit-user-profile-name" class="form-label">Name</label>
@@ -313,18 +315,19 @@
             </div>
             
             <div class="form-control">
-               <input type="submit" value="Submit" id="submit-user-profile-edit-form" class="form-button" data-role="none">
+               <input type="submit" value="Submit" id="submit-user-profile-edit-form" class="form-button" data-role="none" data-deactivate="#user-menu-modal">
             </div>
         </form>
+     </div>
    </section>
 
    <!-- Upload/edit user profile image (by clicking on the "placeholder image") -->
    <section data-role="page" id="profile-upload-user-image">
       <header data-role="header">
          <ul>
-            <li id= "back-button"><a href="#" data-rel="back"></a></li>
+            <li class= "back-button"><a href="#" data-rel="back"></a></li>
             <li class="flex-stretch"></li>
-            <li><a class="js-submituserupload">Save</a></li>
+            <li><a class="js-submituserupload" data-deactivate="#user-menu-modal">Save</a></li>
          </ul>
       </header>
       <div data-role="main" class="overscroll">
@@ -333,7 +336,7 @@
                <label class="image-picker thumbnail">
                   <input type="file" data-role="none" id="image-upload-user-input">
                </label>
-         </form>
+          </div>
       </div>
    </section>
       
@@ -343,12 +346,12 @@
    <section data-role="page" id="page-user-change-password">
       <header data-role="header" class="floating-header">
          <ul>
-            <li id= "back-button"><a href="#" data-rel="back"></a></li>
+            <li class= "back-button"><a href="#" data-rel="back"></a></li>
          </ul>
       </header>
       <div class="user-profile-bottom">
-         <!-- <li id= "back-button"><a href="#" data-rel="back">Back</a></li> -->
-            <form action="" class="user-profile-edit-form">
+         
+            <form class="user-profile-edit-form">
 
             <div class="form-control">
                <label for="edit-animal-breed" class="form-label">Current Password</label>
@@ -364,9 +367,10 @@
                <input class="form-input" type="text" id="edit-user-profile-confirm-password" data-role="none" placeholder="Confirm New Password">
             </div>
             <div class="form-control">
-               <input type="submit" value="Submit" class="form-button" data-role="none">
+               <input type="submit" value="Submit" class="form-button" data-role="none" data-deactivate="#user-menu-modal">
             </div>
         </form>
+     </div>
    </section>
  
 
@@ -375,7 +379,7 @@
   <section data-role="page" id="page-animal-profile">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="animal-profile-top">
-            <img src="" alt=""> 
+            <img alt="animal profile image"> 
             <!-- image credit: https://unsplash.com/photos/vjFC9OjrOtA -->
               <a href="#page-animal-edit-form" id="page-animal-edit-button" data-role="none">Edit</a>
               <a href="#" data-activate="#animal-profile-delete-modal" id="page-animal-delete-button" data-role="none"></a>   
@@ -404,7 +408,7 @@
       </div>
       <header data-role="header" class="floating-header">
          <ul>
-            <li id= "back-button"><a href="#" data-rel="back"></a></li>
+            <li class= "back-button"><a href="#" data-rel="back"></a></li>
          </ul>
       </header>
 
@@ -414,7 +418,7 @@
             <div class="modal-head">Delete Animal</div>
             <div class="modal-body confirm-delete-parent">
                <div class="form-control">
-                  <button type="submit" class="js-animal-delete">Confirm</button>
+                  <button type="submit" class="js-animal-delete" data-deactivate="#animal-profile-delete-modal">Confirm</button>
                </div>
                <div class="form-control">
                   
@@ -438,12 +442,12 @@
    <section data-role="page" id="page-animal-edit-form">
    	<header data-role="header" class="floating-header">
          <ul>
-            <li id= "back-button"><a href="#" data-rel="back"></a></li>
+            <li class= "back-button"><a href="#" data-rel="back"></a></li>
          </ul>
       </header>
    	<div class="animal-profile-bottom">
-   		<!-- <li id= "back-button"><a href="#" data-rel="back">Cancel</a></li> -->
-            <form action="" class="form animal-edit-form">
+   		
+            <form class="form animal-edit-form">
 
             <div class="form-control">
                <label for="edit-animal-name" class="form-label">Animal Name</label>
@@ -482,7 +486,7 @@
    <section data-role="page" id="profile-upload-animal-image">
          <header data-role="header">
             <ul>
-               <li id= "back-button"><a href="#" data-rel="back"></a></li>
+               <li class= "back-button" ><a href="#" data-rel="back"></a></li>
                <li class="flex-stretch"></li>
             <li><a class="js-submitanimalupload">Save</a></li>
             </ul>
@@ -493,7 +497,8 @@
                <label class="image-picker thumbnail">
                   <input type="file" data-role="none" id="animal-upload-user-input">
                </label>
-            </form>
+            
+            </div>
          </div>
       </section>
 
@@ -540,7 +545,7 @@
 
          
 
-   </section>
+   
 
    <!-- Choose/insert an animal description -->
    <section data-role="page" id="page-location-description">
@@ -554,10 +559,10 @@
       </header>
       <div data-role="main">
 
-         <form action="" class="form animal-edit-form">
+         <form class="form animal-edit-form">
             
             <div class="form-control">
-               <label for="map-animal-description" class="form-label">Description</label>
+               <label for="location-description" class="form-label">Description</label>
                <textarea id="location-description" class="form-input" data-role="none" placeholder="Describe the animal"></textarea>
             </div>
           
